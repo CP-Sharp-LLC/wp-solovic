@@ -1,0 +1,95 @@
+/*
+	Theme Name: Solovic Rebirth
+	Description: The NEW susansolovic.com
+	Author: CP Sharp
+	Author URI: http://www.cpsharp.net
+ 
+	Version: 1.0
+ 
+	Tags: cpsharp
+ 
+	Template: genesis
+	Template Version: 1.9
+ 
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php 
+*/
+@import "https://fonts.googleapis.com/css?family=PT+Serif";
+html, body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  width: 100%; }
+
+header, nav, .site-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1050px;
+  height: 150px;
+  background-color: transparent; }
+
+header {
+  margin-top: 1em; }
+
+.header-image header .wrap .site-title, .header-image header .wrap .site-description {
+  opacity: 0;
+  position: absolute;
+  height: 150px;
+  width: 100%;
+  cursor: pointer; }
+
+nav {
+  position: relative;
+  left: 33%;
+  top: -3.5em; }
+  nav ul {
+    list-style: none outside; }
+    nav ul .menu-item:before {
+      content: "";
+      width: 2px;
+      margin: 0 1em 0;
+      background-color: #262626;
+      height: 1.5em;
+      display: inline-block;
+      transform: rotate(25deg);
+      position: relative;
+      top: .25em; }
+    nav ul .menu-item a {
+      transition: all .2s ease-in-out;
+      text-decoration: none;
+      color: #262626;
+      font-family: "PT Serif", serif;
+      font-weight: 700;
+      font-size: 1.2em;
+      font-style: normal;
+      letter-spacing: .1em;
+      line-height: 2em;
+      display: inline-block;
+      white-space: nowrap; }
+    nav ul .sub-menu {
+      opacity: 0;
+      padding: 1em 2em;
+      transition: all .2s ease-in-out;
+      position: absolute;
+      margin: 0em 0em;
+      background-color: #ededed; }
+      nav ul .sub-menu .menu-item {
+        display: block; }
+        nav ul .sub-menu .menu-item:before {
+          display: none; }
+    nav ul li {
+      display: inline-block;
+      line-height: 2em; }
+      nav ul li:hover a {
+        color: #d4d4d4; }
+      nav ul li:hover .sub-menu {
+        opacity: 1; }
+        nav ul li:hover .sub-menu a {
+          color: black; }
+          nav ul li:hover .sub-menu a:hover {
+            color: #d4d4d4; }
+
+/*# sourceMappingURL=style.css.map */
