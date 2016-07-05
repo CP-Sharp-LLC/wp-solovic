@@ -1,0 +1,20 @@
+linters:
+  Comment:
+    enabled: false
+  FinalNewline:
+    enabled: false
+  Indentation:
+    enabled: false
+  PropertySortOrder:
+    enabled: true
+  SelectorDepth:
+    enabled: false
+  SingleLinePerSelector:
+    enabled: false
+  SpaceBeforeBrace:
+    enabled: true
+  VendorPrefix:
+    enabled: false
+  NestingDepth:
+    enabled: false
+
