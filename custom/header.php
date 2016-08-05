@@ -10,7 +10,7 @@ const brand_images = ['cnn.png', 'fox.png', 'foxnews.png', 'msnbc.png', 'pbs.png
 
 function solovic_do_header()
 {
-	$header_image = get_theme_mod(HeaderImageSetting);
+	$header_image = get_stylesheet_directory_uri().'/img/branding/solovic-tm-logo.png';
 	$image_size = getimagesize($header_image);
 
 	$height_style = 'height: 7.5em; margin-bottom: 1em;';

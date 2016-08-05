@@ -52,7 +52,79 @@ header, nav, .site-container {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
+  main {
+    width: 43%;
+    float: left; }
+
+  aside {
+    width: 57%;
+    float: left; }
+    aside section ul {
+      margin: 0;
+      padding: 0; }
+      aside section ul li img {
+        width: 100%;
+        height: auto; }
+
+  nav {
+    display: block;
+    margin: 0;
+    text-align: right; }
+    nav .menu-item a {
+      color: #262626;
+      display: inline-block;
+      font-family: "News Cycle", sans-serif;
+      font-size: 1.2em;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: .1em;
+      line-height: 2em;
+      text-decoration: none;
+      transition: all .2s ease-in-out;
+      white-space: nowrap; }
+    nav .menu-item::before {
+      background-color: #262626;
+      content: '';
+      display: inline-block;
+      height: 1.5em;
+      margin: 0 1em;
+      position: relative;
+      top: .25em;
+      transform: rotate(25deg);
+      width: 2px; }
+      nav .menu-item::before ul:last-of-type li {
+        right: 0; }
+    nav .sub-menu {
+      background-color: #ededed;
+      margin: 0;
+      opacity: 0;
+      padding: 1em 2em;
+      position: absolute;
+      transition: all .2s ease-in-out;
+      display: none;
+      z-index: 1; }
+      nav .sub-menu .menu-item {
+        display: block; }
+        nav .sub-menu .menu-item::before {
+          display: none; }
+    nav ul {
+      list-style: none outside;
+      margin: .5em;
+      padding: 0; }
+    nav li {
+      display: inline-block;
+      line-height: 2em; }
+      nav li:hover a {
+        color: #d4d4d4; }
+      nav li:hover .sub-menu {
+        opacity: 1;
+        display: block; }
+        nav li:hover .sub-menu a {
+          color: #262626; }
+          nav li:hover .sub-menu a:hover {
+            color: #d4d4d4; }
+
   .no-underline {
     text-decoration: none; }
 
@@ -79,20 +151,6 @@ header, nav, .site-container {
       padding: 0 1em;
       vertical-align: middle; }
 
-  main {
-    width: 43%;
-    float: left; }
-
-  aside {
-    width: 57%;
-    float: left; }
-    aside section ul {
-      margin: 0;
-      padding: 0; }
-      aside section ul li img {
-        width: 100%;
-        height: auto; }
-
   .site-header {
     width: 1170px;
     padding: 1em 0 0 0; }
@@ -104,12 +162,13 @@ header, nav, .site-container {
 
   .page-template-landingpage .entry-content {
     padding-right: 2em;
-    margin-left: 46%; }
+    margin-left: 49%;
+    padding-top: 1em; }
     .page-template-landingpage .entry-content img {
       position: absolute;
       left: 1%;
-      margin-top: -5.6em;
-      width: 18%;
+      margin-top: -6.9em;
+      width: 19%;
       height: auto;
       -webkit-animation-duration: 1s;
       animation-duration: 1s;
@@ -121,72 +180,16 @@ header, nav, .site-container {
       animation-name: fadeInLeft; }
     .page-template-landingpage .entry-content p {
       color: rgba(255, 255, 255, 0.75);
-      padding-left: 1.2em;
       text-align: justify; }
-
-  nav {
-    display: block;
-    margin: 0;
-    text-align: right; }
-    nav .menu-item::before {
-      background-color: #262626;
-      content: '';
-      display: inline-block;
-      height: 1.5em;
-      margin: 0 1em;
-      position: relative;
-      top: .25em;
-      transform: rotate(25deg);
-      width: 2px; }
-    nav .menu-item a {
-      color: #262626;
-      display: inline-block;
-      font-family: "News Cycle", sans-serif;
-      font-size: 1.2em;
-      font-style: normal;
-      font-weight: 700;
-      letter-spacing: .1em;
-      line-height: 2em;
-      text-decoration: none;
-      transition: all .2s ease-in-out;
-      white-space: nowrap; }
-    nav .sub-menu {
-      background-color: #ededed;
-      margin: 0;
-      opacity: 0;
-      padding: 1em 2em;
-      position: absolute;
-      transition: all .2s ease-in-out; }
-      nav .sub-menu .menu-item {
-        display: block; }
-        nav .sub-menu .menu-item::before {
-          display: none; }
-    nav ul {
-      list-style: none outside;
-      margin: .5em;
-      padding: 0; }
-    nav li {
-      display: inline-block;
-      line-height: 2em; }
-      nav li:hover a {
-        color: #d4d4d4; }
-      nav li:hover .sub-menu {
-        opacity: 1; }
-        nav li:hover .sub-menu a {
-          color: #262626; }
-          nav li:hover .sub-menu a:hover {
-            color: #d4d4d4; }
-
   .page-template-landingpage article {
     overflow: hidden;
     background-color: #fda701;
     padding: 2em 0 0 0;
-    height: 18em;
+    height: 28em;
     overflow: hidden; }
     .page-template-landingpage article .entry-header {
       width: 48%;
       margin-right: 3%;
-      padding-top: 1em;
       height: 5em; }
       .page-template-landingpage article .entry-header h2 {
         -webkit-animation-duration: 1s;
@@ -197,6 +200,7 @@ header, nav, .site-container {
         -moz-animation-name: fadeInLeft;
         -o-animation-name: fadeInLeft;
         animation-name: fadeInLeft;
+        font-size: 1.35em;
         margin: 0; }
       .page-template-landingpage article .entry-header a {
         text-decoration: none;
@@ -207,7 +211,7 @@ header, nav, .site-container {
         line-height: 1em; }
     .page-template-landingpage article .entry-meta {
       display: none; }
-    .page-template-landingpage article.alt-color {
+    .page-template-landingpage article:nth-of-type(even) {
       background-color: #2b8f87; } }
 @media (max-width: 767px) {
   .site-container {

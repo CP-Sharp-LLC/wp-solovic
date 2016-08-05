@@ -87,7 +87,123 @@ header, nav, .site-container {
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
+  main {
+	width: 43%;
+	float: left;
+  }
+
+  aside {
+	section ul {
+	  margin: 0;
+	  padding: 0;
+
+	  li img {
+		width: 100%;
+		height: auto;
+	  }
+	}
+
+	width: 57%;
+	float: left;
+  }
+
+  nav {
+	display: block;
+	margin: 0;
+	text-align: right;
+
+	.menu-item {
+	  a {
+		color: $menu-black;
+		display: inline-block;
+		font-family: $font-serif;
+		font-size: 1.2em;
+		font-style: normal;
+		font-weight: 700;
+		letter-spacing: .1em;
+		line-height: 2em;
+		text-decoration: none;
+		transition: all .2s ease-in-out;
+		white-space: nowrap;
+	  }
+
+	  &::before {
+		background-color: $menu-black;
+		content: '';
+		display: inline-block;
+		height: 1.5em;
+		margin: 0 1em;
+		position: relative;
+		top: .25em;
+		transform: rotate(25deg);
+		width: 2px;
+
+		ul {
+		  &:last-of-type {
+			li {
+			  right: 0;
+			}
+		  }
+		}
+	  }
+	}
+
+	.sub-menu {
+	  background-color: $menu-bg-gray;
+	  margin: 0;
+	  opacity: 0;
+	  padding: 1em 2em;
+	  position: absolute;
+	  transition: all .2s ease-in-out;
+	  display: none;
+	  z-index: 1;
+
+	  .menu-item {
+
+		display: block;
+
+		&::before {
+		  display: none;
+		}
+	  }
+	}
+
+	ul {
+	  list-style: none outside;
+	  margin: .5em;
+	  padding: 0;
+
+	  li {
+		:nth-child(5) {
+
+		}
+	  }
+	}
+
+	li {
+	  display: inline-block;
+	  line-height: 2em;
+
+	  &:hover {
+		a {
+		  color: $menu-gray;
+		}
+
+		.sub-menu {
+		  opacity: 1;
+		  display: block;
+
+		  a {
+			color: $menu-black;
+			&:hover {
+			  color: $menu-gray;
+			}
+		  }
+		}
+	  }
+	}
+  }
   .no-underline {
 	text-decoration: none;
   }
@@ -114,26 +230,6 @@ header, nav, .site-container {
 	}
   }
 
-  main {
-	width: 43%;
-	float: left;
-  }
-
-  aside {
-	section ul {
-	  margin: 0;
-	  padding: 0;
-
-	  li img {
-		width: 100%;
-		height: auto;
-	  }
-	}
-
-	width: 57%;
-	float: left;
-  }
-
   .site-header {
 	width: 1170px;
 	padding: 1em 0 0 0;
@@ -148,140 +244,62 @@ header, nav, .site-container {
   .page-template-landingpage {
 	.entry-content {
 	  padding-right: 2em;
-	  margin-left: 46%;
+	  margin-left: 49%;
+	  padding-top: 1em;
 
 	  img {
 		position: absolute;
 		left: 1%;
-		margin-top: -5.6em;
-		width: 18%;
+		margin-top: -6.9em;
+		width: 19%;
 		height: auto;
 		@include animated(1s, fadeInLeft);
 	  }
 
 	  p {
 		color: rgba(255, 255, 255, .75);
-		padding-left: 1.2em;
 		text-align: justify;
 	  }
 	}
-  }
 
-  nav {
-	display: block;
-	margin: 0;
-	text-align: right;
+	article {
+	  overflow: hidden;
+	  background-color: $solovic-orange;
+	  padding: 2em 0 0 0;
+	  height: 28em;
+	  overflow: hidden;
 
-	.menu-item::before {
-	  background-color: $menu-black;
-	  content: '';
-	  display: inline-block;
-	  height: 1.5em;
-	  margin: 0 1em;
-	  position: relative;
-	  top: .25em;
-	  transform: rotate(25deg);
-	  width: 2px;
-	}
+	  .entry-header {
+		width: 48%;
+		margin-right: 3%;
+		height: 5em;
 
-	.menu-item a {
-	  color: $menu-black;
-	  display: inline-block;
-	  font-family: $font-serif;
-	  font-size: 1.2em;
-	  font-style: normal;
-	  font-weight: 700;
-	  letter-spacing: .1em;
-	  line-height: 2em;
-	  text-decoration: none;
-	  transition: all .2s ease-in-out;
-	  white-space: nowrap;
-	}
-
-	.sub-menu {
-	  background-color: $menu-bg-gray;
-	  margin: 0;
-	  opacity: 0;
-	  padding: 1em 2em;
-	  position: absolute;
-	  transition: all .2s ease-in-out;
-
-	  .menu-item {
-
-		display: block;
-
-		&::before {
-		  display: none;
+		h2 {
+		  @include animated(1s, fadeInLeft);
+		  font-size: 1.35em;
+		  margin: 0;
 		}
-	  }
-	}
 
-	ul {
-	  list-style: none outside;
-	  margin: .5em;
-	  padding: 0;
-	}
-
-	li {
-	  display: inline-block;
-	  line-height: 2em;
-
-	  &:hover {
 		a {
-		  color: $menu-gray;
+		  text-decoration: none;
+		  color: white;
+		  text-transform: uppercase;
+		  font-family: $font-serif;
+		  font-weight: 700;
+		  line-height: 1em;
 		}
+	  }
 
-		.sub-menu {
-		  opacity: 1;
+	  .entry-meta {
+		display: none;
+	  }
 
-		  a {
-			color: $menu-black;
-
-			&:hover {
-			  color: $menu-gray;
-			}
-		  }
-		}
+	  &:nth-of-type(even) {
+		background-color: $solovic-green;
 	  }
 	}
   }
 
-  .page-template-landingpage article {
-	overflow: hidden;
-	background-color: $solovic-orange;
-	padding: 2em 0 0 0;
-	height: 18em;
-	overflow: hidden;
-
-	.entry-header {
-	  width: 48%;
-	  margin-right: 3%;
-	  padding-top: 1em;
-	  height: 5em;
-
-	  h2 {
-		@include animated(1s, fadeInLeft);
-		margin: 0;
-	  }
-
-	  a {
-		text-decoration: none;
-		color: white;
-		text-transform: uppercase;
-		font-family: $font-serif;
-		font-weight: 700;
-		line-height: 1em;
-	  }
-	}
-
-	.entry-meta {
-	  display: none;
-	}
-
-	&.alt-color {
-	  background-color: $solovic-green;
-	}
-  }
 }
 
 @media (max-width: 767px) {

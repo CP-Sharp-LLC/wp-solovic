@@ -33,6 +33,7 @@ function solovic_frontpage_loop() {
 		array_push($postSlug, $posts[$i]["slug"]);
 	}
 
+	 // add_filter('genesis_attr_entry', 'solovic_alternate_color');
 	pullPostByCategory($postIds, 'tips-2');
 	pullPostByCategory($postIds, 'guest');
 	pullPostByCategory($postIds, '1-podcast');
@@ -43,8 +44,15 @@ function pullPostByCategory($postIds, $category){
 	genesis_custom_loop($miniQuery);
 }
 
+function solovic_reg_color($attributes){
+	$attributes['class'] = str_replace(' alt-color', '', $attributes['class']);
+	return $attributes;
+}
 
-
+function solovic_alternate_color($attributes){
+	$attributes['class'] .= ' alt-color';
+	return $attributes;
+}
 //remove_action('genesis_loop', 'genesis_do_loop');
 //add_action('genesis_loop', 'inthenewsLoop');
 /*
