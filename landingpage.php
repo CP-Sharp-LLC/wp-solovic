@@ -10,6 +10,16 @@
 // get four top posts using loop
 remove_action('genesis_loop', 'genesis_do_loop');
 add_action('genesis_loop', 'solovic_frontpage_loop');
+remove_action('genesis_entry_footer', 'genesis_do_loop');
+// add_action('genesis_entry_footer', 'solovic_article_blend');
+add_action('genesis_after_entry', 'solovic_article_blend');
+function solovic_article_blend() {
+	$gradient_color='orange';
+	echo '<div class="gradient-border '.$gradient_color.'-gradient">';
+	echo  'Test';
+	echo '</div>';
+}
+
 
 function solovic_frontpage_loop() {
 	global $wpdb;
@@ -28,9 +38,10 @@ function solovic_frontpage_loop() {
 	$posts = $wpdb -> get_results($frontpage_query, ARRAY_A);
 	$postIds = array();
 	$postSlug = array();
-	for ($i = 0; $i < count($posts); $i++) {
-		array_push($postIds, $posts[$i]["ID"]);
-		array_push($postSlug, $posts[$i]["slug"]);
+	$max = count($posts);
+	for ($i = 0;  $i < $max; $i++) {
+		$postIds[] = $posts[$i]['ID'];
+		$postSlug[] = $posts[$i]['slug'];
 	}
 
 	 // add_filter('genesis_attr_entry', 'solovic_alternate_color');

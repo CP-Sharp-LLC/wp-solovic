@@ -7,13 +7,13 @@ add_action('genesis_after_content', 'solovic_image_slider');
 
 function solovic_image_slider()
 {
-	echo "<aside class=\"sidebar sidebar-primary widget-area\" role=\"complementary\" aria-label=\"Primary Sidebar\" itemtype=\"http://schema.org/WPSideBar\">
-	<section class=\"widget widget_text\">
-			<ul class=\"moto-widget-slider-list\" data-moto-slider-options=\"{&quot;itemsCount&quot;:3,&quot;slideshowEnabled&quot;:true,&quot;slideshowDelay&quot;:5,&quot;slideshowAnimationType&quot;:&quot;fade&quot;,&quot;showNextPrev&quot;:false,&quot;showPaginationDots&quot;:false,&quot;showSlideCaptions&quot;:true}\" style=\"width: auto; position: relative;\">";
+	echo '<aside class="sidebar sidebar-primary widget-area" role="complementary" aria-label="Primary Sidebar" itemtype="http://schema.org/WPSideBar">';
+	echo '<section class="widget widget_text">';
+	echo '<ul class="moto-widget-slider-list" data-moto-slider-options="{&quot;itemsCount&quot;:3,&quot;slideshowEnabled&quot;:true,&quot;slideshowDelay&quot;:5,&quot;slideshowAnimationType&quot;:&quot;fade&quot;,&quot;showNextPrev&quot;:false,&quot;showPaginationDots&quot;:false,&quot;showSlideCaptions&quot;:true}" style="width: auto; position: relative;">';
 	$slider_path = get_stylesheet_directory_uri() . '/img/slider/';
 	foreach (slide_images as $the_image) {
 		echo '<li><img src="' . $slider_path . $the_image . '" /></li>';
 	}
-	echo "</ul>				
-	</section></aside>";
+	echo '</ul>';
+	echo '</section></aside>';
 }	

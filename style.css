@@ -1,5 +1,4 @@
-/*
-Theme Name: Solovic Rebirth
+/*  Theme Name: Solovic Rebirth
 	Description: The NEW susansolovic.com
 	Author: CP Sharp
 	Author URI: http://www.cpsharp.net
@@ -18,8 +17,8 @@ Theme Name: Solovic Rebirth
 html, body {
   font: 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
-  width: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  width: 100%; }
 
 header, nav, .site-container {
   background-color: transparent;
@@ -54,18 +53,29 @@ header, nav, .site-container {
     transform: none; } }
 @media (min-width: 1200px) {
   main {
-    width: 43%;
-    float: left; }
+    float: left;
+    width: 43%; }
+    * main div.gradient-border {
+      border: solid black;
+      border-width: 0 0 1px 0;
+      position: absolute;
+      width: 43%;
+      margin-top: -1em;
+      height: 1em; }
+    main div.orange-gradient {
+      background-image: linear-gradient(rgba(253, 167, 1, 0), rgba(253, 167, 1, 0.3), #fda701); }
+    main div.green-gradient {
+      background-image: linear-gradient(rgba(253, 167, 1, 0), rgba(253, 167, 1, 0.3), #fda701); }
 
   aside {
-    width: 57%;
-    float: left; }
+    float: left;
+    width: 57%; }
     aside section ul {
       margin: 0;
       padding: 0; }
       aside section ul li img {
-        width: 100%;
-        height: auto; }
+        height: auto;
+        width: 100%; }
 
   nav {
     display: block;
@@ -97,12 +107,12 @@ header, nav, .site-container {
         right: 0; }
     nav .sub-menu {
       background-color: #ededed;
+      display: none;
       margin: 0;
       opacity: 0;
       padding: 1em 2em;
       position: absolute;
       transition: all .2s ease-in-out;
-      display: none;
       z-index: 1; }
       nav .sub-menu .menu-item {
         display: block; }
@@ -118,8 +128,8 @@ header, nav, .site-container {
       nav li:hover a {
         color: #d4d4d4; }
       nav li:hover .sub-menu {
-        opacity: 1;
-        display: block; }
+        display: block;
+        opacity: 1; }
         nav li:hover .sub-menu a {
           color: #262626; }
           nav li:hover .sub-menu a:hover {
@@ -152,24 +162,19 @@ header, nav, .site-container {
       vertical-align: middle; }
 
   .site-header {
-    width: 1170px;
-    padding: 1em 0 0 0; }
+    padding: 1em 0 0;
+    width: 1170px; }
 
   .site-footer {
     clear: both;
-    width: 100%;
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
 
   .page-template-landingpage .entry-content {
-    padding-right: 2em;
     margin-left: 49%;
+    padding-right: 2em;
     padding-top: 1em; }
     .page-template-landingpage .entry-content img {
-      position: absolute;
-      left: 1%;
-      margin-top: -6.9em;
-      width: 19%;
-      height: auto;
       -webkit-animation-duration: 1s;
       animation-duration: 1s;
       -webkit-animation-fill-mode: both;
@@ -177,20 +182,25 @@ header, nav, .site-container {
       -webkit-animation-name: fadeInLeft;
       -moz-animation-name: fadeInLeft;
       -o-animation-name: fadeInLeft;
-      animation-name: fadeInLeft; }
+      animation-name: fadeInLeft;
+      height: auto;
+      left: 4%;
+      margin-top: -7.8em;
+      max-height: 7.5em;
+      position: absolute;
+      width: 16%; }
     .page-template-landingpage .entry-content p {
       color: rgba(255, 255, 255, 0.75);
       text-align: justify; }
   .page-template-landingpage article {
-    overflow: hidden;
     background-color: #fda701;
-    padding: 2em 0 0 0;
-    height: 28em;
-    overflow: hidden; }
+    height: 10em;
+    overflow: hidden;
+    padding: 2em 0 0; }
     .page-template-landingpage article .entry-header {
-      width: 48%;
+      height: 5em;
       margin-right: 3%;
-      height: 5em; }
+      width: 48%; }
       .page-template-landingpage article .entry-header h2 {
         -webkit-animation-duration: 1s;
         animation-duration: 1s;
@@ -203,12 +213,12 @@ header, nav, .site-container {
         font-size: 1.35em;
         margin: 0; }
       .page-template-landingpage article .entry-header a {
-        text-decoration: none;
         color: white;
-        text-transform: uppercase;
         font-family: "News Cycle", sans-serif;
         font-weight: 700;
-        line-height: 1em; }
+        line-height: 1em;
+        text-decoration: none;
+        text-transform: uppercase; }
     .page-template-landingpage article .entry-meta {
       display: none; }
     .page-template-landingpage article:nth-of-type(even) {
@@ -219,163 +229,5 @@ header, nav, .site-container {
 
   nav {
     display: none; } }
-/*
-@media (min-width: 768px) {
-  .site-container {
-	width: 750px
-  }
-
-  nav {
-	position: relative;
-	left: 33%;
-	top: -3.5em;
-	display: none;
-	ul {
-	  list-style: none outside;
-
-	  .menu-item:before {
-		content: "";
-		width: 2px;
-		margin: 0 1em 0;
-		background-color: #262626;
-		height: 1.5em;
-		display: inline-block;
-		transform: rotate(25deg);
-		position: relative;
-		top: .25em;
-	  }
-
-	  .menu-item a {
-		transition: all .2s ease-in-out;
-		text-decoration: none;
-		color: rgb(38, 38, 38);
-		font-family: "PT Serif", serif;
-		font-weight: 700;
-		font-size: 1.2em;
-		font-style: normal;
-		letter-spacing: .1em;
-		line-height: 2em;
-		display: inline-block;
-		white-space: nowrap;
-	  }
-
-	  .sub-menu {
-		.menu-item {
-
-		  display: block;
-		  &:before {
-			display: none;
-		  }
-		}
-
-		opacity: 0;
-		padding: 1em 2em;
-		transition: all .2s ease-in-out;
-		position: absolute;
-		margin: 0em 0em;
-		background-color: #ededed;
-	  }
-
-	  li {
-		display: inline-block;
-		line-height: 2em;
-		&:hover {
-		  a {
-			color: #d4d4d4;
-		  }
-		  .sub-menu {
-			a {
-			  color: black;
-			  &:hover {
-				color: #d4d4d4;
-			  }
-			}
-			opacity: 1;
-		  }
-		}
-	  }
-	}
-  }
-}
-
-@media (min-width: 992px) {
-  .site-container {
-	width: 970px
-  }
-
-  nav {
-	position: relative;
-	left: 33%;
-	top: -3.5em;
-	display: none;
-
-	ul {
-	  list-style: none outside;
-
-	  .menu-item:before {
-		content: "";
-		width: 2px;
-		margin: 0 1em 0;
-		background-color: #262626;
-		height: 1.5em;
-		display: inline-block;
-		transform: rotate(25deg);
-		position: relative;
-		top: .25em;
-	  }
-
-	  .menu-item a {
-		transition: all .2s ease-in-out;
-		text-decoration: none;
-		color: rgb(38, 38, 38);
-		font-family: "PT Serif", serif;
-		font-weight: 700;
-		font-size: 1.2em;
-		font-style: normal;
-		letter-spacing: .1em;
-		line-height: 2em;
-		display: inline-block;
-		white-space: nowrap;
-	  }
-
-	  .sub-menu {
-		.menu-item {
-
-		  display: block;
-		  &:before {
-			display: none;
-		  }
-		}
-
-		opacity: 0;
-		padding: 1em 2em;
-		transition: all .2s ease-in-out;
-		position: absolute;
-		margin: 0em 0em;
-		background-color: #ededed;
-	  }
-
-	  li {
-		display: inline-block;
-		line-height: 2em;
-		&:hover {
-		  a {
-			color: #d4d4d4;
-		  }
-		  .sub-menu {
-			a {
-			  color: black;
-			  &:hover {
-				color: #d4d4d4;
-			  }
-			}
-			opacity: 1;
-		  }
-		}
-	  }
-	}
-  }
-}
-*/
 
 /*# sourceMappingURL=style.css.map */
