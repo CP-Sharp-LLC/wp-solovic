@@ -13,10 +13,18 @@ add_action('genesis_loop', 'solovic_frontpage_loop');
 remove_action('genesis_entry_footer', 'genesis_do_loop');
 // add_action('genesis_entry_footer', 'solovic_article_blend');
 add_action('genesis_after_entry', 'solovic_article_blend');
+
+$gradient_color='green';
+
 function solovic_article_blend() {
-	$gradient_color='orange';
-	echo '<div class="gradient-border '.$gradient_color.'-gradient">';
-	echo  'Test';
+	if($GLOBALS['gradient_color'] == 'green'){
+		$GLOBALS['gradient_color'] = 'orange';
+	}
+	else {
+		$GLOBALS['gradient_color'] = 'green';
+	}
+	echo '<div class="gradient-border '.$GLOBALS['gradient_color'].'-gradient">';
+	echo  'Continue reading...&nbsp;&nbsp;';
 	echo '</div>';
 }
 
@@ -47,7 +55,7 @@ function solovic_frontpage_loop() {
 	 // add_filter('genesis_attr_entry', 'solovic_alternate_color');
 	pullPostByCategory($postIds, 'tips-2');
 	pullPostByCategory($postIds, 'guest');
-	pullPostByCategory($postIds, '1-podcast');
+	pullPostByCategory($postIds, '1-podcasts');
 }
 
 function pullPostByCategory($postIds, $category){

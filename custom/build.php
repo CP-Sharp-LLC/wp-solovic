@@ -44,5 +44,6 @@ function solovic_customize_register($wp_customize ) {
         'active_callback' => 'is_front_page',
     ) );*/
 }
+
 add_action( 'customize_register', 'solovic_customize_register' );
 

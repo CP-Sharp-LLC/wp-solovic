@@ -5,8 +5,7 @@ add_action('genesis_header', 'solovic_do_header');
 
 remove_action('genesis_after_header', 'genesis_do_nav');
 
-const headline = "New York Times Bestseller, regularly seen on";
-const brand_images = ['cnn.png', 'fox.png', 'foxnews.png', 'msnbc.png', 'pbs.png', 'wsj.png'];
+const headline = 'New York Times Bestseller, regularly seen on';
 
 function solovic_do_header()
 {
@@ -27,22 +26,23 @@ function solovic_do_header()
 
 function output_header_nav_container($height_style, $margin_style)
 {
-	echo "<div>";
+	echo '<div>';
 	output_branding($margin_style);
 	genesis_do_nav();
-	echo "</div>";
+	echo '</div>';
 }
 
 function output_branding($style)
 {
+	$brand_images = array( 'cnn.png', 'fox.png', 'foxnews.png', 'msnbc.png', 'pbs.png', 'wsj.png' );
 	$branding_path = get_stylesheet_directory_uri() . '/img/branding/';
 
-	echo '<a class="no-underline" href="' . wp_guess_url() . '"><div class="branding" style="' . $style . '">';
+	echo '<a class="no-underline" href="' . '/' . '"><div class="branding" style="' . $style . '">';
 	echo '<p>' . headline . '</p>';
 	echo "<div class='branding-images'>";
-	foreach (brand_images as $the_image) {
+	foreach ($brand_images as $the_image) {
 		echo '<img src="' . $branding_path . $the_image . '" />';
 	}
-	echo "</div>";
+	echo '</div>';
 	echo '</div></a>';
 }

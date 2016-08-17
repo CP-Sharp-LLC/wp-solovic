@@ -51,6 +51,25 @@ header, nav, .site-container {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
+@keyframes slidy {
+  0% {
+    left: 0%; }
+  20% {
+    left: 0%; }
+  25% {
+    left: -100%; }
+  45% {
+    left: -100%; }
+  50% {
+    left: -200%; }
+  70% {
+    left: -200%; }
+  75% {
+    left: -300%; }
+  95% {
+    left: -300%; }
+  100% {
+    left: -300%; } }
 @media (min-width: 1200px) {
   main {
     float: left;
@@ -60,20 +79,43 @@ header, nav, .site-container {
       border-width: 0 0 1px 0;
       position: absolute;
       width: 43%;
-      margin-top: -1em;
-      height: 1em; }
+      margin-top: -4em;
+      height: 4em;
+      line-height: 6em;
+      text-align: right;
+      letter-spacing: .1em;
+      color: white;
+      font-family: "News Cycle", serif;
+      font-size: 1.35em;
+      font-variant: small-caps; }
     main div.orange-gradient {
-      background-image: linear-gradient(rgba(253, 167, 1, 0), rgba(253, 167, 1, 0.3), #fda701); }
+      background-image: linear-gradient(rgba(253, 167, 1, 0), rgba(253, 167, 1, 0.4), #fda701); }
     main div.green-gradient {
-      background-image: linear-gradient(rgba(253, 167, 1, 0), rgba(253, 167, 1, 0.3), #fda701); }
+      background-image: linear-gradient(rgba(43, 143, 135, 0), rgba(43, 143, 135, 0.4), #2b8f87); }
 
   aside {
     float: left;
     width: 57%; }
-    aside section ul {
+    aside div#slider {
+      overflow: hidden;
+      height: 46em; }
+    aside div#slider figure img {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      width: 20%;
+      float: left; }
+    aside div#slider figure {
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      text-align: left;
+      font-size: 0;
+      animation: 20s slidy infinite alternate; }
+    aside #slider figure {
       margin: 0;
       padding: 0; }
-      aside section ul li img {
+      aside #slider figure img {
         height: auto;
         width: 100%; }
 
@@ -81,7 +123,7 @@ header, nav, .site-container {
     display: block;
     margin: 0;
     text-align: right; }
-    nav .menu-item a {
+    nav li.menu-item a {
       color: #262626;
       display: inline-block;
       font-family: "News Cycle", sans-serif;
@@ -93,7 +135,7 @@ header, nav, .site-container {
       text-decoration: none;
       transition: all .2s ease-in-out;
       white-space: nowrap; }
-    nav .menu-item::before {
+    nav li.menu-item::before {
       background-color: #262626;
       content: '';
       display: inline-block;
@@ -103,8 +145,10 @@ header, nav, .site-container {
       top: .25em;
       transform: rotate(25deg);
       width: 2px; }
-      nav .menu-item::before ul:last-of-type li {
+      nav li.menu-item::before ul:last-of-type li {
         right: 0; }
+    nav li.menu-item:last-of-type ul {
+      right: 0; }
     nav .sub-menu {
       background-color: #ededed;
       display: none;
@@ -174,7 +218,7 @@ header, nav, .site-container {
     margin-left: 49%;
     padding-right: 2em;
     padding-top: 1em; }
-    .page-template-landingpage .entry-content img {
+    .page-template-landingpage .entry-content p:first-of-type img {
       -webkit-animation-duration: 1s;
       animation-duration: 1s;
       -webkit-animation-fill-mode: both;
@@ -184,9 +228,9 @@ header, nav, .site-container {
       -o-animation-name: fadeInLeft;
       animation-name: fadeInLeft;
       height: auto;
-      left: 4%;
+      left: 2%;
       margin-top: -7.8em;
-      max-height: 7.5em;
+      max-height: 20.5em;
       position: absolute;
       width: 16%; }
     .page-template-landingpage .entry-content p {
@@ -194,7 +238,7 @@ header, nav, .site-container {
       text-align: justify; }
   .page-template-landingpage article {
     background-color: #fda701;
-    height: 10em;
+    height: 21em;
     overflow: hidden;
     padding: 2em 0 0; }
     .page-template-landingpage article .entry-header {
@@ -219,6 +263,9 @@ header, nav, .site-container {
         line-height: 1em;
         text-decoration: none;
         text-transform: uppercase; }
+    .page-template-landingpage article .entry-content a {
+      color: white;
+      text-decoration: none; }
     .page-template-landingpage article .entry-meta {
       display: none; }
     .page-template-landingpage article:nth-of-type(even) {
