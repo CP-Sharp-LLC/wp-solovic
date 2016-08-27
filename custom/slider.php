@@ -9,7 +9,7 @@ function solovic_image_slider() {
 	// echo '<ul class="moto-widget-slider-list" data-moto-slider-options="{&quot;itemsCount&quot;:3,&quot;slideshowEnabled&quot;:true,&quot;slideshowDelay&quot;:5,&quot;slideshowAnimationType&quot;:&quot;fade&quot;,&quot;showNextPrev&quot;:false,&quot;showPaginationDots&quot;:false,&quot;showSlideCaptions&quot;:true}" style="width: auto; position: relative;">';
 	//$slide_images = [
 	$slider_path = get_stylesheet_directory_uri() . '/img/slider/';
-	echo '<div id="slider">
+	echo '<div id="slider" class="slider">
 <figure>
 <img src="' . $slider_path . 'confidence-red-dress-resize.png" alt>
 <img src="' . $slider_path . 'square-blue-biz-resize.png" alt>

@@ -46,7 +46,7 @@ function solovic_frontpage_loop() {
 	$posts = $wpdb -> get_results($frontpage_query, ARRAY_A);
 	$postIds = array();
 	$postSlug = array();
-	$max = count($posts);
+	$max = 2; //count($posts);
 	for ($i = 0;  $i < $max; $i++) {
 		$postIds[] = $posts[$i]['ID'];
 		$postSlug[] = $posts[$i]['slug'];
@@ -72,6 +72,9 @@ function solovic_alternate_color($attributes){
 	$attributes['class'] .= ' alt-color';
 	return $attributes;
 }
+
+remove_action( 'genesis_loop_else', 'genesis_do_noposts' );
+
 //remove_action('genesis_loop', 'genesis_do_loop');
 //add_action('genesis_loop', 'inthenewsLoop');
 /*

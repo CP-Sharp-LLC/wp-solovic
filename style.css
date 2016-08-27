@@ -14,6 +14,18 @@
 	License URI: http://www.opensource.org/licenses/gpl-license.php
 */
 @import "https://fonts.googleapis.com/css?family=News+Cycle:700";
+.standout {
+  font-size: 1.4em; }
+
+.gray-highlight {
+  color: #747474; }
+
+.green-highlight {
+  color: #2b8f87; }
+
+.orange-highlight {
+  color: #fda701; }
+
 html, body {
   font: 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
@@ -53,9 +65,9 @@ header, nav, .site-container {
     transform: none; } }
 @keyframes slidy {
   0% {
-    left: 0%; }
+    left: 0; }
   20% {
-    left: 0%; }
+    left: 0; }
   25% {
     left: -100%; }
   45% {
@@ -71,59 +83,99 @@ header, nav, .site-container {
   100% {
     left: -300%; } }
 @media (min-width: 1200px) {
-  main {
+  .blurb {
     float: left;
+    width: 33%; }
+    .blurb .writeup {
+      padding: 0 6% 0 0;
+      text-align: justify; }
+
+  .rightbox {
+    height: 736.5px;
+    overflow: hidden; }
+
+  .sidebar {
+    /*border-bottom: 1px solid rgba(0, 0, 0, .43);
+    border-left: 1px solid rgba(0, 0, 0, .38);
+    border-top: 1px solid rgba(0, 0, 0, .38);*/
+    float: left;
+    height: 733px;
+    margin-left: -1px;
+    margin-top: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 57%; }
+
+  .everlong {
+    clear: both;
+    padding-top: 5em; }
+    .everlong .sidebar {
+      border: 0;
+      height: auto;
+      width: 19%; }
+      .everlong .sidebar .contact {
+        padding: 0 0 0 14%;
+        text-align: center; }
+
+  .content {
+    float: left;
+    overflow: hidden;
     width: 43%; }
+    .content .speaking {
+      color: #262626;
+      font-family: "News Cycle", sans-serif;
+      font-size: 3.8em;
+      line-height: 1.1em;
+      padding: 0 2% 0 0;
+      text-align: center; }
+
+  main {
+    height: 733px; }
     * main div.gradient-border {
-      border: solid black;
-      border-width: 0 0 1px 0;
-      position: absolute;
-      width: 43%;
-      margin-top: -4em;
-      height: 4em;
-      line-height: 6em;
-      text-align: right;
-      letter-spacing: .1em;
-      color: white;
+      color: #fff;
       font-family: "News Cycle", serif;
       font-size: 1.35em;
-      font-variant: small-caps; }
+      font-variant: small-caps;
+      height: 100px;
+      letter-spacing: .1em;
+      line-height: 7em;
+      margin-top: -100px;
+      position: absolute;
+      text-align: right;
+      width: 43%; }
     main div.orange-gradient {
-      background-image: linear-gradient(rgba(253, 167, 1, 0), rgba(253, 167, 1, 0.4), #fda701); }
+      background-image: linear-gradient(rgba(253, 167, 1, 0), rgba(253, 167, 1, 0.74), #fda701); }
     main div.green-gradient {
-      background-image: linear-gradient(rgba(43, 143, 135, 0), rgba(43, 143, 135, 0.4), #2b8f87); }
+      background-image: linear-gradient(rgba(43, 143, 135, 0), rgba(43, 143, 135, 0.78), #2b8f87); }
 
   aside {
     float: left;
+    height: 736px;
     width: 57%; }
-    aside div#slider {
-      overflow: hidden;
-      height: 46em; }
-    aside div#slider figure img {
-      -webkit-filter: grayscale(100%);
-      filter: grayscale(100%);
-      width: 20%;
-      float: left; }
-    aside div#slider figure {
-      position: relative;
-      width: 500%;
-      margin: 0;
-      left: 0;
-      text-align: left;
-      font-size: 0;
-      animation: 20s slidy infinite alternate; }
-    aside #slider figure {
-      margin: 0;
-      padding: 0; }
-      aside #slider figure img {
-        height: auto;
-        width: 100%; }
+    aside .slider {
+      height: 736px;
+      overflow: hidden; }
+      aside .slider figure {
+        animation: 20s slidy infinite alternate;
+        font-size: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        text-align: left;
+        width: 500%; }
+        aside .slider figure img {
+          -webkit-filter: grayscale(50%);
+          filter: grayscale(50%);
+          float: left;
+          min-height: 736px;
+          width: 20%; }
 
   nav {
     display: block;
     margin: 0;
     text-align: right; }
-    nav li.menu-item a {
+    nav .menu-item a {
       color: #262626;
       display: inline-block;
       font-family: "News Cycle", sans-serif;
@@ -135,7 +187,7 @@ header, nav, .site-container {
       text-decoration: none;
       transition: all .2s ease-in-out;
       white-space: nowrap; }
-    nav li.menu-item::before {
+    nav .menu-item::before {
       background-color: #262626;
       content: '';
       display: inline-block;
@@ -145,9 +197,9 @@ header, nav, .site-container {
       top: .25em;
       transform: rotate(25deg);
       width: 2px; }
-      nav li.menu-item::before ul:last-of-type li {
+      nav .menu-item::before ul:last-of-type li {
         right: 0; }
-    nav li.menu-item:last-of-type ul {
+    nav .menu-item:last-of-type ul {
       right: 0; }
     nav .sub-menu {
       background-color: #ededed;
@@ -213,6 +265,20 @@ header, nav, .site-container {
     clear: both;
     text-align: center;
     width: 100%; }
+    .site-footer a {
+      font-weight: bold;
+      color: rgba(253, 167, 1, 0.5);
+      text-decoration: none;
+      -webkit-transition: all .5s;
+      -moz-transition: all .5s;
+      -ms-transition: all .5s;
+      -o-transition: all .5s;
+      transition: all .5s;
+      font-size: 1.1em;
+      letter-spacing: -0.1em; }
+      .site-footer a:hover {
+        color: #fda701;
+        letter-spacing: .3em; }
 
   .page-template-landingpage .entry-content {
     margin-left: 49%;
@@ -227,18 +293,19 @@ header, nav, .site-container {
       -moz-animation-name: fadeInLeft;
       -o-animation-name: fadeInLeft;
       animation-name: fadeInLeft;
+      -webkit-filter: grayscale(95%);
       height: auto;
-      left: 2%;
-      margin-top: -7.8em;
+      left: 4.6%;
+      margin-top: 2.25em;
       max-height: 20.5em;
       position: absolute;
-      width: 16%; }
+      width: 12%; }
     .page-template-landingpage .entry-content p {
       color: rgba(255, 255, 255, 0.75);
       text-align: justify; }
   .page-template-landingpage article {
     background-color: #fda701;
-    height: 21em;
+    height: 334.7px;
     overflow: hidden;
     padding: 2em 0 0; }
     .page-template-landingpage article .entry-header {
@@ -264,12 +331,76 @@ header, nav, .site-container {
         text-decoration: none;
         text-transform: uppercase; }
     .page-template-landingpage article .entry-content a {
-      color: white;
+      color: #fff;
       text-decoration: none; }
     .page-template-landingpage article .entry-meta {
       display: none; }
     .page-template-landingpage article:nth-of-type(even) {
-      background-color: #2b8f87; } }
+      background-color: #2b8f87; }
+
+  .contact a {
+    /* Font & Text */
+    background: transparent none repeat scroll 0 0;
+    border: 0 none #333333;
+    border-collapse: separate;
+    border-radius: 0;
+    border-spacing: 0 0;
+    bottom: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+    caption-side: top;
+    clear: none;
+    color: #333333;
+    cursor: auto;
+    display: block;
+    empty-cells: show;
+    /* Color & Background */
+    float: none;
+    font-family: "Open Sans", sans-serif;
+    /* Box */
+    font-size: 22px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    height: 22px;
+    left: 0;
+    letter-spacing: normal;
+    line-height: 22px;
+    list-style: disc outside none;
+    /* Positioning */
+    margin: 0;
+    max-height: none;
+    max-width: none;
+    min-height: 0;
+    min-width: 0;
+    outline: red dashed 1px;
+    outline-offset: 0;
+    overflow: visible;
+    padding: 44.7969px 0;
+    /* List */
+    position: relative;
+    /* Table */
+    resize: none;
+    right: 0;
+    table-layout: auto;
+    text-align: center;
+    text-decoration: none;
+    /* Miscellaneous */
+    text-indent: 0;
+    text-overflow: clip;
+    text-shadow: none;
+    /* Effects */
+    text-transform: none;
+    top: 0;
+    transform: none;
+    transition: all 0s ease 0s;
+    vertical-align: baseline;
+    visibility: visible;
+    white-space: normal;
+    width: 100%;
+    word-spacing: 0;
+    word-wrap: normal;
+    z-index: 9999; } }
 @media (max-width: 767px) {
   .site-container {
     width: 750px; }
