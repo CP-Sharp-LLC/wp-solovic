@@ -17,6 +17,7 @@
 
 $font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-serif: "News Cycle", sans-serif;
+$font-open: "Open Sans", sans;
 $menu-black: rgb(38, 38, 38);
 $menu-gray: rgb(212, 212, 212);
 $menu-bg-gray: rgb(237, 237, 237);
@@ -47,6 +48,14 @@ $solovic-green-transparent: rgba(43, 143, 135, 0);
 	color: $solovic-orange;
 }
 
+@mixin transit($vars...) {
+	-webkit-transform: $vars;
+	-moz-transform: $vars;
+	-ms-transform: $vars;
+	-o-transform: $vars;
+	transform: $vars;
+}
+
 @mixin animated($time, $animate-name) {
 	-webkit-animation-duration: $time;
 	animation-duration: $time;
@@ -56,6 +65,38 @@ $solovic-green-transparent: rgba(43, 143, 135, 0);
 	-moz-animation-name: $animate-name;
 	-o-animation-name: $animate-name;
 	animation-name: $animate-name;
+}
+
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin rotate($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+@mixin scale($scale) {
+	@include transform(scale($scale));
+	@include transform(scale($scale));
+}
+
+@mixin translate($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+@mixin skew($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+@mixin transform-origin($origin) {
+	-o-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+	transform-origin: $origin;
 }
 
 html, body {
@@ -84,29 +125,25 @@ header, nav, .site-container {
 
 @keyframes fadeInRight {
 	0% {
+		@include transform(translate3d(100%, 0, 0));
 		opacity: 0;
-		-webkit-transform: translate3d(100%, 0, 0);
-		transform: translate3d(100%, 0, 0);
 	}
 
 	100% {
+		@include transform(none);
 		opacity: 1;
-		-webkit-transform: none;
-		transform: none;
 	}
 }
 
 @keyframes fadeInLeft {
 	0% {
+		@include transform(translate3d(-100%, 0, 0));
 		opacity: 0;
-		-webkit-transform: translate3d(-100%, 0, 0);
-		transform: translate3d(-100%, 0, 0);
 	}
 
 	100% {
+		@include transform(none);
 		opacity: 1;
-		-webkit-transform: none;
-		transform: none;
 	}
 }
 
@@ -275,6 +312,7 @@ header, nav, .site-container {
 
 		.menu-item {
 			a {
+				@include transit(all .2s ease-in-out);
 				color: $menu-black;
 				display: inline-block;
 				font-family: $font-serif;
@@ -284,11 +322,11 @@ header, nav, .site-container {
 				letter-spacing: .1em;
 				line-height: 2em;
 				text-decoration: none;
-				transition: all .2s ease-in-out;
 				white-space: nowrap;
 			}
 
 			&::before {
+				@include transform(rotate(25deg));
 				background-color: $menu-black;
 				content: '';
 				display: inline-block;
@@ -296,7 +334,6 @@ header, nav, .site-container {
 				margin: 0 1em;
 				position: relative;
 				top: .25em;
-				transform: rotate(25deg);
 				width: 2px;
 
 				ul {
@@ -403,21 +440,17 @@ header, nav, .site-container {
 		width: 100%;
 
 		a {
-			font-weight: bold;
-			color: $solovic-orange-fade;
-			text-decoration: none;
-			-webkit-transition: all .5s;
-			-moz-transition: all .5s;
-			-ms-transition: all .5s;
-			-o-transition: all .5s;
-			transition: all .5s;
-			font-size: 1.1em;
-			letter-spacing: -0.1em;
-
 			&:hover {
 				color: $solovic-orange;
 				letter-spacing: .3em;
 			}
+
+			color: $solovic-orange-fade;
+			font-size: 1.1em;
+			font-weight: bold;
+			letter-spacing: -.1em;
+			text-decoration: none;
+			@include transit(all .5s);
 		}
 	}
 
@@ -450,7 +483,6 @@ header, nav, .site-container {
 			height: 334.7px;
 			overflow: hidden;
 			padding: 2em 0 0;
-			// border-top: 1px solid rgba(0, 0, 0, 0.11);
 
 			.entry-header {
 				height: 5em;
@@ -466,7 +498,6 @@ header, nav, .site-container {
 				a {
 					color: rgb(255, 255, 255);
 					font-family: $font-serif;
-					font-weight: 700;
 					line-height: 1em;
 					text-decoration: none;
 					text-transform: uppercase;
@@ -488,76 +519,79 @@ header, nav, .site-container {
 		}
 	}
 
-	.contact a {
-		/* Font & Text */
-		background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-		border: 0 none rgb(51, 51, 51);
-		border-collapse: separate;
-		border-radius: 0;
-		border-spacing: 0 0;
-		bottom: 0;
-		box-shadow: none;
-		box-sizing: content-box;
-		caption-side: top;
-		clear: none;
-		color: rgb(51, 51, 51);
-		cursor: auto;
-		display: block;
-		empty-cells: show;
-
-		/* Color & Background */
-		float: none;
-		font-family: "Open Sans", sans-serif;
-
-		/* Box */
-		font-size: 22px;
-		font-style: normal;
-		font-variant: normal;
-		font-weight: 600;
-		height: 22px;
-		left: 0;
-		letter-spacing: normal;
-		line-height: 22px;
-		list-style: disc outside none;
-
-		/* Positioning */
-		margin: 0;
-		max-height: none;
-		max-width: none;
-		min-height: 0;
-		min-width: 0;
-		outline: rgb(255, 0, 0) dashed 1px;
-		outline-offset: 0;
-		overflow: visible;
-		padding: 44.7969px 0;
-
-		/* List */
+	.panel {
+		float: left;
+		font-size: .8em;
+		height: 200px;
+		margin: 20px;
+		-webkit-perspective: 600px;
+		perspective: 600px;
 		position: relative;
+		width: 200px;
 
-		/* Table */
-		resize: none;
-		right: 0;
-		table-layout: auto;
-		text-align: center;
-		text-decoration: none;
+		&.flip {
+			.front {
+				@include transform(rotateY(179deg));
+				background: #333;
+				border-color: #eee;
+				box-shadow: 0 15px 50px rgba(0, 0, 0, .2);
+				z-index: 900;
+			}
 
-		/* Miscellaneous */
-		text-indent: 0;
-		text-overflow: clip;
-		text-shadow: none;
+			.back {
+				@include transform(rotateX(0deg));
+				@include transform(rotateY(0deg));
+				background: #80868d;
+				box-shadow: 0 15px 50px rgba(0, 0, 0, .2);
+				z-index: 1000;
+			}
+		}
 
-		/* Effects */
-		text-transform: none;
-		top: 0;
-		transform: none;
-		transition: all 0s ease 0s;
-		vertical-align: baseline;
-		visibility: visible;
-		white-space: normal;
-		width: 100%;
-		word-spacing: 0;
-		word-wrap: normal;
-		z-index: 9999;
+		.front {
+			@include transform(rotateX(0deg));
+			@include transform(rotateY(0deg));
+			@include transit(all .4s ease-in-out);
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			background: #6b7077;
+			border: 1px solid #ccc;
+			box-shadow: 0 1px 5px rgba(0, 0, 0, .9);
+			float: none;
+			height: inherit;
+			left: 0;
+			position: absolute;
+			text-align: center;
+			top: 0;
+			-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+
+			width: inherit;
+			z-index: 900;
+		}
+
+		.back {
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			background: #333;
+			border: 1px solid #ccc;
+			float: none;
+			height: inherit;
+			left: 0;
+			position: absolute;
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+			top: 0;
+
+			-webkit-transform: rotateY(-179deg);
+			transform: rotateY(-179deg);
+
+			-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+
+			@include transit(all .4s ease-in-out);
+
+			width: inherit;
+			z-index: 800;
+		}
 	}
 }
 

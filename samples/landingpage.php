@@ -142,4 +142,6 @@ function inthenewsBeforeLoop() {
 }
 
 */
+require_once(get_stylesheet_directory()."/custom/flopbutton.php");
+
 genesis();

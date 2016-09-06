@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d29de991-3e75-4446-ab38-b3a4459869bc" name="solovic uat" url="http://uat.susansolovic.com">
+        <fileTransfer host="susansolovic.com" port="21" rootFolder="/public_html/uat/">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

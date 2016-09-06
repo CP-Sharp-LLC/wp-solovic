@@ -1,0 +1,3324 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+</head>
+<body></body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<header class="cf">
+	<div id="brand" class="cf">
+		<a href="#top" title="Back to the top"><img id="logo" src="http://www.annemariedufour.com/_img/logoMask.png"
+		                                            alt="Logo"></a>
+		<h1>Anne-Marie Dufour</h1>
+		<img id="tagline" src="http://www.annemariedufour.com/_img/transpImg.png" alt="Crafting your web">
+	</div>
+	<nav class="cf" role="navigation">
+		<div class="topMenu cf">
+			<div class="shopToggleMenu" id="mainMenu">
+				<h3>MENU</h3>
+			</div>
+			<ul class="menu expand transAfter radius cf">
+				<li><a id='pfLink' href="#portfolio" title="PORTFOLIO">PORTFOLIO</a></li>
+				<li><a id='aboutLink' href="#about" title="ABOUT">ABOUT</a></li>
+				<li><a id='contactLink' href="#contact" title="CONTACT">CONTACT</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<main class="index">
+	<section class="faded" id="banner">
+		<div class="tag">
+			<p class="tagp">Beyond web design and development, remain the</p>
+			<img id="delightfulDetails" class="tagp" src="http://www.annemariedufour.com/_img/transpImg.png"
+			     alt="Delightful Details">
+			<p class="tagp">that weave a</p>
+			<img id="memorableExperience" class="tagp" src="http://www.annemariedufour.com/_img/transpImg.png"
+			     alt="Memorable Experience">
+		</div>
+	</section>
+	<section class="mainSection" id="portfolio">
+		<h1>Portfolio</h1>
+		<div id="PFMenu" class="cf">
+			<h2>Choose a category</h2>
+			<button id="buttonWebDD" type="button">Web Design<br>&amp; Development</button>
+			<button id="buttonBrandID" class="selected" type="button">Brand<br>Identity</button>
+			<button id="buttonJsApp" type="button">JavaScript<br>Applications</button>
+		</div>
+		<div class="PFWrapper cf">
+			<section id="PortfolioJsApp" class="hidden cf">
+				<h2>Games</h2>
+				<div id="gamesWrapper" class="PortfolioSubWrapper cf">
+					<div class="PFthumb jsApp games">
+						<a class="disabled fcc" href="http://codepen.io/amdufour/pen/OMBaYj" target="_blank"
+						   title="Simon Game">
+							<div class="PFBox cf">
+								<img id="simonImg" class="PFImage"
+								     src="http://www.annemariedufour.com/_img/transpImg.png" alt="Simon Game">
+								<div class="PFTitles">
+									<h3>Simon Game</h3>
+									<h4>JS Application, Game</h4>
+									<div class="PFText">
+										<p>JavaScript version of Simon, a popular memory game from the&nbsp;1970s.</p>
+										<p>The user is presented with a random pattern of button presses, indicated with
+											light and sound. If the user reproduces the pattern correctly, a step is
+											added to the series, for a maximum of 20&nbsp;steps. If the user gives a
+											wrong answer, the pattern is presented again or, in strict mode, the game
+											restarts from the beginning. The game speeds up incrementally at steps 5, 9
+											and 13 and the user have a limited amount of time to answer.</p>
+										<p>The script uses the Web Audio API to generate sounds when the buttons are
+											pressed and CSS animations to improve the user's experience.</p>
+										<p>This game was built as the last project to obtain the freeCodeCamp front end
+											development certification.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="PFthumb jsApp games">
+						<a class="disabled fcc" href="http://codepen.io/amdufour/pen/ZQqrqJ" target="_blank"
+						   title="Tic Tac Toe Game">
+							<div class="PFBox">
+								<img id="ticTacToeImg" class="PFImage"
+								     src="http://www.annemariedufour.com/_img/transpImg.png" alt="Tic Tac Toe Game">
+								<div class="PFTitles">
+									<h3>Tic Tac Toe</h3>
+									<h4>JS Application, Game</h4>
+									<div class="PFText">
+										<p>A Tic Tac Toe game, simply!</p>
+										<p>The user chooses if he wants to play with X or O, then the computer plays
+											first. But there's a trick... the user can't win. Since a good Tic Tac Toe
+											player can't lose, the strategy behind the computer's moves ensure its
+											victory or, if the user is good enough, a tie. </p>
+										<p>This project was the occasion for me to explore the concept of <span>semantic animation</span>.
+											Instead of a traditional modal box, I made the Tic Tac Toe board rotate to
+											ask the user's input... and tell him he lost.</p>
+										<p>This game was built as a freeCodeCamp intermediate front end development
+											project.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<h2>JSON APIs and AJAX</h2>
+				<div id="apiWrapper" class="PortfolioSubWrapper cf">
+					<div class="PFthumb jsApp api">
+						<a class="disabled fcc" href="http://codepen.io/amdufour/pen/JGNbpQ" target="_blank"
+						   title="Wikipedia Viewer">
+							<div class="PFBox">
+								<img id="wikiImg" class="PFImage"
+								     src="http://www.annemariedufour.com/_img/transpImg.png" alt="Wikipedia Viewer">
+								<div class="PFTitles">
+									<h3>Wikipedia Viewer</h3>
+									<h4>JS Application, JSON API</h4>
+									<div class="PFText">
+										<p>This application allows the user to search Wikipedia entries in a search box.
+											A maximum of 10&nbsp;results is displayed on the page, including a thumbnail
+											image (when available), the title of the entry and a short description. On
+											hover, an abstract of the article is also displayed.</p>
+										<p>Autocomplete suggestions help the user, who can search in the 25&nbsp;most
+											common languages of Wikipedia. The jQuery Autocomplete UI was used to
+											support these two&nbsp;features.</p>
+										<p>This app was built as a freeCodeCamp intermediate front end development
+											project.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="PFthumb jsApp api">
+						<a class="disabled fcc" href="http://codepen.io/amdufour/pen/GooGKP" target="_blank"
+						   title="Camper News Stories">
+							<div class="PFBox">
+								<img id="CamperNewsImg" class="PFImage"
+								     src="http://www.annemariedufour.com/_img/transpImg.png" alt="Camper News Stories">
+								<div class="PFTitles">
+									<h3>Camper News Stories</h3>
+									<h4>JS Application, JSON API</h4>
+									<div class="PFText">
+										<p>A little application displaying the 100&nbsp;most recent posts from Camper
+											News. Uses the Camper News Hot Stories API to show the image related to the
+											post, its title, author and how many upvotes each story has.</p>
+										<p>This app was built as a freeCodeCamp intermediate front end development
+											project.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="PFthumb jsApp api">
+						<a class="disabled fcc" href="http://codepen.io/amdufour/pen/jWEEXL" target="_blank"
+						   title="Local Weather">
+							<div class="PFBox">
+								<img id="weatherImg" class="PFImage"
+								     src="http://www.annemariedufour.com/_img/transpImg.png" alt="Local Weather">
+								<div class="PFTitles">
+									<h3>Local Weather</h3>
+									<h4>JS Application, JSON API</h4>
+									<div class="PFText">
+										<p>Displays the local weather of the user, in ˚C or ˚F.</p>
+										<p>First, the geolocation of the user is verified, then a request is made to the
+											OpenWeatherMap API to get the current weather at this location. The
+											background image and the icon are displayed accordingly.</p>
+										<p>This app was built as a freeCodeCamp intermediate front end development
+											project.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<h2>Utility Applications</h2>
+				<div id="apiWrapper" class="PortfolioSubWrapper cf">
+					<div class="PFthumb jsApp utility">
+						<a class="disabled fcc" href="http://codepen.io/amdufour/pen/zvQxpr" target="_blank"
+						   title="JS Calculator">
+							<div class="PFBox">
+								<img id="calculatorImg" class="PFImage"
+								     src="http://www.annemariedufour.com/_img/transpImg.png" alt="JS Calculator">
+								<div class="PFTitles">
+									<h3>JS Calculator</h3>
+									<h4>JS Application, Utility</h4>
+									<div class="PFText">
+										<p>A basic exercise in javaScript to play with numbers, store previous results
+											and clear display when requested.</p>
+										<p>This project was the occasion to play around the snap.svg library and to
+											create a simple, clean interface.</p>
+										<p>This app was built as a freeCodeCamp basic front end development project.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="PFthumb jsApp utility">
+						<a class="disabled fcc" href="http://codepen.io/amdufour/pen/YybLdE" target="_blank"
+						   title="Pomodoro Clock">
+							<div class="PFBox">
+								<img id="pomodoroImg" class="PFImage"
+								     src="http://www.annemariedufour.com/_img/transpImg.png" alt="Pomodoro Clock">
+								<div class="PFTitles">
+									<h3>Pomodoro Clock</h3>
+									<h4>JS Application, Utility</h4>
+									<div class="PFText">
+										<p>A tool for the Pomodoro working strategy. The user can choose the length of
+											the working and break sessions and can reset the timer anytime.</p>
+										<p>Some CSS animation allows to visualize remaining times and the HTML5 audio
+											tag is used to mark the beginning and the end of the sessions.</p>
+										<p>This app was built as a freeCodeCamp basic front end development project.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="PFthumb jsApp utility">
+						<a class="disabled fcc" href="http://codepen.io/amdufour/pen/jbvjwq" target="_blank"
+						   title="Quote Generator">
+							<div class="PFBox">
+								<img id="quoteImg" class="PFImage"
+								     src="http://www.annemariedufour.com/_img/transpImg.png" alt="Quote Generator">
+								<div class="PFTitles">
+									<h3>Quote Generator</h3>
+									<h4>JS Application, Utility</h4>
+									<div class="PFText">
+										<p>In need of inspiration? This application displays a quote for you. That's
+											it!</p>
+										<p>This app was built as the first freeCodeCamp basic front end development
+											project.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section id="PortfolioBrandID" class="cf">
+				<h2>Brand Identity</h2>
+				<div id="brandIDWrapper" class="PortfolioSubWrapper cf">
+					<div class="PFthumb branID">
+						<a class="disabled newPF newPFYigBrand" href="http://www.yogaisabellegodin.ca/" target="_blank"
+						   title="Yoga Isabelle Godin">
+							<div class="PFBox">
+								<img id="yigBrandImg" class="PFImage"
+								     src="http://www.annemariedufour.com/_img/transpImg.png" alt="Yoga Isabelle Godin">
+								<div class="PFTitles">
+									<h3>Yoga Isabelle Godin</h3>
+									<h4>Brand Identity &amp; Website<br><span>August 2015</span></h4>
+									<div class="PFText">
+										<p>Isabelle Godin is a yoga studio owner working with the viniyoga approach and
+											based in Chicoutimi (Québec). She teaches highly personalized classes to
+											small groups and one to one. She also offers yoga teacher training.</p>
+										<p>Even if Isabelle is in the yoga business since more than 10 years, this was
+											the first time she was investing in a professional brand identity. She knows
+											her customers and message inside out so, even if we were building everything
+											from scratch, the whole process went like a charm.</p>
+										<img id="yigTree" class="PFImage previewImg previewYIGBrandId Left"
+										     src="http://www.annemariedufour.com/_img/transpImg.png"
+										     alt="Photo of a big tree">
+										<p>Knowing Isabelle since years, I wanted to create for her a spacious and
+											grounded atmosphere. After researching the yoga history and philosophy, I
+											chose the tree as a starting point. Isabelle is deeply attached to the
+											tradition of yoga and a tree translates perfectly the solid and deep roots
+											on which her teaching is based. She is also a very grounded person, like a
+											tree you can lean on. Then, we both agreed to use the photo of an oak, a
+											common symbol of strength and endurance, as a full-screen image when landing
+											on <span class="linkToPreview linkToYigWebsite">her website</span>. More
+											specifically, we chose a photo where the emphasis is placed on the base of
+											the tree.</p>
+										<img id="yigTypoAndPalette" class="PFImage previewImg previewYIGBrandId Right"
+										     src="http://www.annemariedufour.com/_img/transpImg.png"
+										     alt="Typefaces and Palette">
+										<p>I assembled the color palette from this photo. As a base, I used neutral
+											shades of black, grey and white that I lit up with a small dose of a fresh
+											green. For the texts, I selected 2 typefaces, Lato light, a stable and
+											friendly sans-serif font, and Tangerine regular, where the ascenders of the
+											lowercase letters remind us of the ones used in Sanskrit, the language in
+											which yoga was created.</p>
+										<p>For the logo, I explored the concept of lenses. Indeed, we tend to see the
+											world around us through our own glasses, which are mostly tinted or
+											distorted by our life experiences. The philosophy of yoga says that it’s
+											regular practice brings us to refine this perception process. Like if our
+											lenses were slowly cleaning up, revealing our reality without judgment or
+											preconception.</p>
+										<img id="yigLogo" class="PFImage previewImg previewYIGBrandId Left"
+										     src="http://www.annemariedufour.com/_img/transpImg.png"
+										     alt="Logo of Yoga Isabelle Godin">
+										<p>The logo consists of 3 overlapping lenses, like if they were about to align
+											with each other. In the colored version, I played with transparency and
+											shadows to give it an evanescent presence. It also allowed me to superimpose
+											the name of the brand on top of it. Finally, the word yoga is much bigger
+											than Isabelle's name in the logo. I made this choice knowing how important
+											it is in her business that the focus is on yoga itself instead of the
+											teacher.</p>
+										<p>As I mentioned earlier, working with Isabelle was a real pleasure. I hope the
+											business she built through years of dedicated teaching will be well served
+											by the brand identity we created together.</p>
+										<p><span class="linkToPreview linkToYigWebsite">Click here to read how I planned, designed and developed her website.</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="PFthumb branID">
+						<a class="disabled newPF" href="#" target="_blank" title="Titan Auto">
+							<div class="PFBox">
+								<img id="titanBrandImg" class="PFImage"
+								     src="http://www.annemariedufour.com/_img/transpImg.png" alt="Titan Auto">
+								<div class="PFTitles">
+									<h3>Titan Auto</h3>
+									<h4>Brand Identity &amp; Assets<br><span>November 2015</span></h4>
+									<div class="PFText">
+										<img id="titanLogos" class="PFImage previewImg previewTitan Left"
+										     src="http://www.annemariedufour.com/_img/transpImg.png"
+										     alt="Versions of the Titan Auto logo">
+										<p>Titan auto is a used car reseller located in Budapest, Hungary. The owners
+											asked me to create their brand identity, their logo and some assets.
+										<p>
+										<p>The customers of Titan auto are mostly families. To reach them, we decided to
+											focus on three of their qualities in the branding process: <span>Reliable, Secure and Accessible</span>
+										</p>
+										<p>The owners requested that we use two specific colors as the base of their
+											brand, a bright green and a dark grey. Working from there, I prepared a
+											color palette where the grey has a slight blue tint, to carry the idea of
+											reliability and security. The green acts as an accent color, which makes the
+											brand vibrant and accessible.</p>
+										<img id="titanTypePaletteCard" class="PFImage previewImg previewTitan Right"
+										     src="http://www.annemariedufour.com/_img/transpImg.png"
+										     alt="Typefaces and Palette of Titan Auto">
+										<p>For the name of the company, I opted for two sans-serif typefaces. The first
+											one, Eurostile Extended Black, is large and solid, representing perfectly
+											the name Titan. The second typeface is Acumin Pro Extra Condensed, which is
+											clean and modern, keeping the visual balance and adding a friendly feeling
+											to the brand.</p>
+										<p>The name titan refers to "giant deities of incredible strength", to "the
+											largest moon of Saturn" and the titanium, a material of exceptional strength
+											and durability. Like the brand, the logo needed to carry these strong
+											references. My first source of inspiration for the logo design was the
+											metallic emblem of popular car companies, like Mercedes-Benz and Suzuki. I
+											knew I wanted to work around the letter T of the name and, when I realized
+											that some steering wheels actually look like a T-shape inside a circle, I
+											knew I got our concept.</p>
+										<img id="titanSkectchesAndLogo" class="PFImage previewImg previewTitan"
+										     src="http://www.annemariedufour.com/_img/transpImg.png"
+										     alt="Sketches for the logo">
+										<p>After a few sketching attempts, I came out with a 3D, metallic version, where
+											the circle uses the bright green chosen earlier. I also prepared 2D
+											versions, for printing purposes. Then, the business card design was clean
+											and simple, reflecting the brand.</p>
+										<img id="titanAssets" class="PFImage previewImg previewTitan Left"
+										     src="http://www.annemariedufour.com/_img/transpImg.png"
+										     alt="Titan Auto Assets">
+										<p>I was greatly appreciative of the opportunity to work with a new company,
+											building with them a solid brand image from the start. I’m glad I could
+											design assets that meet their needs and I hope they will help them reach
+											their customers.</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="PFthumb branID">
+						<a class="disabled newPF newPFEgkBrand" href="http://erdgepker.hu/index.html" target="_blank"
+						   title="Érdgépker">
+							<div class="PFBox">
+								<img id="egkBrandImg" class="PFImage"
+								     src="http://www.annemariedufour.com/_img/transpImg.png" alt="Érdgépker">
+								<div class="PFTitles">
+									<h3>Érdgépker</h3>
+									<h4>Brand Identity &amp; Assets<br><span>June 2015</span></h4>
+									<div class="PFText">
+										<p>Érdgépker is a business selling small electric tools and appliance parts to
+											other companies and to individuals. Through 3&nbsp;web shops, they target
+											different markets. They are located in Budapest, Hungary since 2006. The
+											owner reached to me to create a brand identity for Érdgépker and <span
+													class="linkToPreview linkToEgkWebsite">renew their website</span>.
+										</p>
+										<p>First of all, I discussed with the owner and did some research to determine
+											the personality of Érdgépker and the message it wants to communicate. It had
+											to refer to the technical aspect of their products and their precision. It
+											also had to establish a powerful, yet friendly impression.</p>
+										<img id="egkPalette" class="PFImage previewImg previewEgkBrandId Left"
+										     src="http://www.annemariedufour.com/_img/transpImg.png"
+										     alt="Typeface and color palette">
+										<p>With these parameters in head, I created a color palette with metallic grey
+											as a base. Then, to add vibrancy, I used a bright orange-red as the accent
+											color. This color refers also to Einhell tools, which is the main brand sold
+											by Érdgépker. A sans-serif geometric and convivial typeface goes along the
+											color palette. I chose Roboto regular and light for its simplicity and its
+											readability.</p>
+										<img id="egkLogo" class="PFImage previewImg previewEgkBrandId Right"
+										     src="http://www.annemariedufour.com/_img/transpImg.png"
+										     alt="Logo designed for Érdgépker">
+										<p>The next step consisted in the design of the logo. Again, we needed a
+											mechanical, clean and simple logo. I played around the letter <span>G</span>
+											of Érdgépker due to its interesting geometric attributes and because of the
+											word <span>gép</span>, which means machine in Hungarian. Since the company
+											gathers 3&nbsp;shops, I designed the letter from the 3&nbsp;edges of a
+											tilted square and, later, used each of these edges to distinguish the shops
+											on <span class="linkToPreview linkToEgkWebsite">the website</span>. An
+											orange-red arrow completes the letter <span>G</span>, referring to the
+											precision of the products and the enthusiast service provided by Érdgépker.
+										</p>
+										<img id="egkBizzCard" class="PFImage previewImg previewEgkBrandId Left"
+										     src="http://www.annemariedufour.com/_img/transpImg.png"
+										     alt="Business card designed for Érdgépker">
+										<p>Finally, I designed a business card which main goal is to list and introduce
+											the web shops under Érdgépker. It consists in 3&nbsp;main sections, the logo
+											at the top, the web shops short descriptions and urls in the center and the
+											contact information at the bottom.</p>
+										<p>My client and I were both very happy with the resulting brand identity. It is
+											straight to the point, represents well Érdgépker and will be easily
+											recognizable by its current and future clients. From there, I was ready to
+											build their <span class="linkToPreview linkToEgkWebsite">new website!</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section id="PortfolioWebDD" class="hidden cf">
+				<h2>Web Design &amp; Development</h2>
+				<div id="webDDWrapper" class="PortfolioSubWrapper cf">
+					<div class="PFthumb webDD">
+						<a class="disabled newPF newPFYigWebsite" href="http://www.yogaisabellegodin.ca/"
+						   target="_blank" title="Yoga Isabelle Godin">
+							<div class="PFBox">
+								<img id="yigSiteImg" class="PFImage"
+								     src="http://www.annemariedufour.com/_img/transpImg.png" alt="Yoga Isabelle Godin">
+								<div class="PFTitles">
+									<h3>Yoga Isabelle Godin</h3>
+									<h4>Web Design &amp; Development<br><span>August 2015</span></h4>
+									<div class="PFText">
+										<p>Isabelle Godin is a yoga studio owner working with the viniyoga approach and
+											based in Chicoutimi (Québec). She teaches highly personalized classes to
+											small groups and one to one. She also offers yoga teacher training.</p>
+										<p>After finishing working on her <span class="linkToPreview linkToYigBrand">brand identity</span>,
+											I had most elements on hand to plan, design and develop her website. This
+											website has 2&nbsp;main purposes: explaining what is yoga, more specifically
+											the viniyoga approach, and detailing the services offered at the studio. We
+											chose to add very few pictures to the website, keeping the emphasis on the
+											texts.</p>
+										<img id="yigPlan" class="PFImage previewImg previewYIGWebsite Left"
+										     src="http://www.annemariedufour.com/_img/spriteYigWebsite.jpg"
+										     alt="Planning the content architecture">
+										<p>I prepared the content architecture plan shown here, which was our reference
+											point through the whole process. Indeed, having a clear vision of the
+											website's content and it's organization is the foundation of consistency and
+											ensures a smooth browsing experience for the future visitors. The site is
+											built around 4&nbsp;sections: the mission of the studio, the services
+											offered, the teachers and how to contact them. Each of these sections is
+											divided into 2 to 4 subsections. To give the site an impression of unity, I
+											decided to build its main content on a one-page model. To keep its height
+											relatively small and ensure it can be browsed at a glance, I added secondary
+											navigation bars in each section to access the content of its subsections.
+											This way, the user has access to almost all the information without
+											switching from one page to the other.</p>
+										<img id="yigMockup" class="PFImage previewImg previewYIGWebsite Right"
+										     src="http://www.annemariedufour.com/_img/spriteYigWebsite.jpg"
+										     alt="Mockup of the website">
+										<p>When we land on the main page, the tree photo selected during the branding
+											process and the logo fade in slowly, establishing the quiet ambiance of the
+											site. I also made sure that every transition on the website occurs smoothly,
+											using subtle animations.</p>
+										<p>This photo is the unifying thread of the main page. Indeed, it is fixed in
+											the background and, playing with transparency, we can still see it in some
+											sections of the main page, for example behind the teaching section showed
+											here. Finally, citations from yoga philosophy were added in every section of
+											the site, constantly reminding the visitor of the roots of yoga.</p>
+										<img id="yigLanding" class="PFImage previewImg previewYIGWebsite"
+										     src="http://www.annemariedufour.com/_img/spriteYigWebsite.jpg"
+										     alt="Landing page">
+										<div id="sectionsYig">
+											<img id="yigMission" class="PFImage previewImg previewYIGWebsite"
+											     src="http://www.annemariedufour.com/_img/spriteYigWebsite.jpg"
+											     alt="View of different sections">
+											<img id="yigEnseignement" class="PFImage previewImg previewYIGWebsite"
+											     src="http://www.annemariedufour.com/_img/spriteYigWebsite.jpg"
+											     alt="View of different sections">
+										</div>
+										<p>I can’t wait to continue working with Isabelle as her website evolves with
+											her business and her clients.</p>
+										<p><span class="linkToPreview linkToYigBrand">Click here to read how I created her brand identity.</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="PFthumb webDD">
+						<a class="disabled newPF newPFEgkWebsite" href="http://erdgepker.hu/index.html" target="_blank"
+						   title="Érdgépker">
+							<div class="PFBox">
+								<img id="egkSiteImg" class="PFImage"
+								     src="http://www.annemariedufour.com/_img/transpImg.png" alt="Érdgépker">
+								<div class="PFTitles">
+									<h3>Érdgépker</h3>
+									<h4>Web Design &amp; Development<br><span>June 2015</span></h4>
+									<div class="PFText">
+										<p>Érdgépker is a business selling small electric tools and appliance parts to
+											other companies and to individuals. Through 3&nbsp;web shops, they target
+											different markets. They are located in Budapest, Hungary since 2006. The
+											owner reached to me to <span class="linkToPreview linkToEgkBrand">create a brand identity</span>
+											for Érdgépker and renew their website.</p>
+										<img id="egkLandingDesktop" class="PFImage previewImg previewEgkWebsite Left"
+										     src="http://www.annemariedufour.com/_img/transpImg.png"
+										     alt="Desktop landing page">
+										<p>Once the personality and the message of the company were clearly established,
+											I was ready to design and develop their new website. The main goal of this
+											site is to give an overview of the 3&nbsp;shops grouped under Érdgépker,
+											like a catalog. The owner and I decided to display, for each shop, a
+											descriptive tagline and a carousel with featured products. Also, the site
+											had to contain a description of their services and their contact
+											information.</p>
+										<p>The landing page is divided into 2&nbsp;parts, the left column with the logo
+											and the navigation, and the main column on the right, with the 3&nbsp;shops
+											and their respective carousels. As designed during the branding process, the
+											logo is built from 3&nbsp;edges of a tilted square. On the image, we see how
+											a different edge of the logo is lit up to distinguish each shop.</p>
+										<img id="egkLandingMobile" class="PFImage previewImg previewEgkWebsite Right"
+										     src="http://www.annemariedufour.com/_img/transpImg.png"
+										     alt="Mobile landing page">
+										<p>On the mobile version, the landing page structure is built into a single
+											column, using an accordion menu to hide and display the carousels. Indeed,
+											clicking on a shop name opens the related carousel and gives access to the
+											featured products. I used <span
+													class="linkToPreview linkToSlickjs">slick.js</span> as the script
+											being the carousel for its flexibility and its ease of use.</p>
+										<p>I designed the website keeping the technical yet friendly qualities of the
+											brand in mind. The shapes and corners are straight and highlights of
+											orange-red spread vibrancy through the site. To add some depth to the final
+											product, I included a subtle metallic texture in the background.</p>
+										<div id="xtraPagesWrapper">
+											<img id="egkXtraPage1" class="PFImage previewImg previewEgkWebsite"
+											     src="http://www.annemariedufour.com/_img/transpImg.png"
+											     alt="Mobile landing page">
+											<img id="egkXtraPage2" class="PFImage previewImg previewEgkWebsite"
+											     src="http://www.annemariedufour.com/_img/transpImg.png"
+											     alt="Mobile landing page">
+											<img id="egkXtraPage3" class="PFImage previewImg previewEgkWebsite"
+											     src="http://www.annemariedufour.com/_img/transpImg.png"
+											     alt="Mobile landing page">
+										</div>
+										<p>Finally, the pages displaying the services and contact information are kept
+											clean and simple, with oversized images of tools in the background.</p>
+										<p>It was particularly fun working on such a small website, where all my
+											attention was focused on displaying few text but many products in a dynamic
+											and lively way.</p>
+										<p><span class="linkToPreview linkToEgkBrand">Click here to read how I designed their brand.</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+		</div>
+	</section>
+	<section class="mainSection" id="about">
+		<h1>About</h1>
+		<div class="sectionWrapper cf">
+			<img src="http://www.annemariedufour.com/_img/photo.jpg" alt="A photo of me">
+			<div class="bio">
+				<p>Since as far as I can remember, I'm a book rat, a learning junkie. Nothing lights me up more than
+					broadening my field of comprehension and grasping how things work.</p>
+				<p>My curiosity for sciences and design brought me to mechanical engineering, where I met coding. After
+					my bachelor's degree, I gravitated around computational fluid dynamics, grad studies and teaching
+					for about 7 years. Teaching was always a big part of my work, of the way I get to dive deeper into
+					different subjects and connect with others. It is also an occasion to structure my understanding in
+					little, digestible bits and see how they connect to each other.</p>
+				<p>It is this passion for logic games and how things are structured which makes me enjoy coding so much.
+					I get a deep feeling of satisfaction when I play around a methodic and elegant script. My background
+					in engineering also gives me a solid foundation noticing patterns and playing with mathematical
+					relationships, which I find useful in many aspects of development and design.</p>
+			</div>
+			<div class="bio">
+				<p>Recently, my little family and I moved from Québec (Canada) to Budapest (Hungary). A turning point in
+					my career, where I decided to focus on coding and design. I acquired my skills with the help of
+					learning platforms (<a href="http://www.freecodecamp.com/" target="_blank"
+					                       title="Visit freecodecamp.com">freecodecamp.com</a>, <a
+							href="http://www.lynda.com/" target="_blank" title="Visit lynda.com">lynda.com</a>, <a
+							href="https://www.skillshare.com/" target="_blank" title="Visit skillshare.com">skillshare.com</a>),
+					consistent practice and some freelance projects. I love how this field allows to constantly refine
+					our knowledge and offers endless facets to learn. I'm also thrilled by the way developers are
+					generous with their know-how and can't wait to give back to this community.</p>
+				<p>The next steps for me are to join a team, take part in bigger projects and continue to learn, learn,
+					learn!</p>
+				<p>When I'm not excited about the last bit of code I just cracked, a new elegant typeface or the next
+					course I will take to improve my skills, I spend my time playing lego with my boyfriend and our
+					little boy, knitting warm socks, studying yoga, cooking, traveling and learning Hungarian.</p>
+				<p class="download"><a href="http://www.annemariedufour.com/_doc/resumeAMDufour_2016-02.pdf"
+				                       download="resumeAMDufour">Download my resume</a></p>
+			</div>
+		</div>
+	</section>
+	<section class="mainSection" id="contact">
+		<h1>Contact</h1>
+		<div class="contacts">
+			<a id="email" href="mailto:hello@annemariedufour.com">hello@annemariedufour.com</a>
+			<div id="contactIcons">
+				<a href="https://www.linkedin.com/in/anne-marie-dufour-b73556109?trk=nav_responsive_tab_profile_pic"
+				   target="_blank" title="Find me on linkedIn">
+					<i class="fa fa-linkedin-square"></i>
+				</a>
+				<a href="http://codepen.io/amdufour/" target="_blank" title="Find me on codepen">
+					<i class="fa fa-codepen"></i>
+				</a>
+			</div>
+		</div>
+	</section>
+	<section id="modal">
+		<div class="preview">
+			<div class="PFBox">
+				<div>
+					<img id="imgWelcome" src="http://www.annemariedufour.com/_img/transpImg.png"
+					     alt="Welcome to my site!">
+					<p>My name is Anne-Marie and I'm a self-taught Front End Developer &amp; Designer. I am currently
+						looking to be an active part of a team and learn with passionate, seasoned developers and
+						designers.</p>
+					<p>You will find here a chosen selection of my work.</p>
+					<p>I hope you enjoy your visit and I look forward to talking with you about how my problem-solving
+						skills, my creative touch and my enthusiasm can be a great addition to your organization.</p>
+					<a href="#contact" title="CONTACT">
+						<button id="contactMe" type="button">CONTACT ME</button>
+					</a>
+				</div>
+				<button class="closePreviewButt" type="button">x</button>
+			</div>
+		</div>
+	</section>
+	<img id="PFHighResImg" src="http://www.annemariedufour.com/_img/spritePFHighRes.jpg" alt="Portfolio images">
+</main>
+<footer class="cf">
+	<p>© 2015 Anne-Marie Dufour</p>
+</footer>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+
+		/* Smooth scroll by Chris Coyier https://css-tricks.com/snippets/jquery/smooth-scrolling/
+		 Scroll to specific section on front page */
+		$(function() {
+			$('a[href*=#]:not([href=#])').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname)              {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: (target.offset().top)
+						}, 1000);
+						return false;
+					}
+				}
+			});
+		});
+
+
+		var windowWidth = $(window).width();
+		var previewWidth = $(window).width();
+		var previewHeight = window.innerHeight;
+
+		// Display modal
+		function modal() {
+
+			$("body").css({ overflow: 'hidden' });
+			$('#modal div.preview').css('width', previewWidth);
+			$('#modal div.preview').css('height', previewHeight);
+			$('#modal div.preview div.PFBox').css('height', (previewHeight * .9));
+			console.log('previewWidth: ' + previewWidth);
+			console.log('previewHeight: ' + previewHeight);
+			console.log('previewHeight PFBox: ' + (previewHeight * .9));
+
+			$('#modal div.preview').css('opacity', '1');
+			$('#modal').fadeIn(600);
+			setTimeout(function() {
+				$('#modal div.preview div.PFBox').addClass('openPreview');
+			}, 600);
+
+			$('button.closePreviewButt').click(function() {
+				fadeModal();
+			}); // $('button.closePreviewButt').click()
+			$('button#contactMe').click(function() {
+				fadeModal();
+			}); // $('button.closePreviewButt').click()
+
+			function fadeModal() {
+
+				$('#modal div.preview div.PFBox').addClass('closePreview');
+				$("body").css({ overflow: 'inherit' })
+
+				setTimeout(function() {
+					$('#modal div.preview').css('opacity', '0');
+				}, 200);
+				setTimeout(function() {
+					$('#modal').css('display', 'none');
+				}, 700);
+
+			} // function fadeModal()
+
+		} // function modal()
+
+		// Add flower image on bigger screens
+
+		$(window).resize(function() {
+			var newWidth = $(window).width();
+			if (newWidth > 680 && windowWidth < 680) {
+				addFlower();
+			} else if (newWidth < 680 && windowWidth > 680) {
+				removeFlower();
+			}
+			windowWidth = newWidth;
+			if (windowPos < header.outerHeight()-120) {
+				$('img#flower').css('z-index', '20');
+			}
+
+			previewWidth = $(window).width();
+			previewHeight = $(window).height();
+			$('div.preview').css('width', previewWidth);
+			$('div.preview').css('height', previewHeight);
+			$('div.preview div.PFBox').css('height', (previewHeight * .9));
+		});
+
+
+		var windowPos = $(window).scrollTop();
+		var header = $('header');
+
+		var pfOffset = $('section#portfolio').offset();
+		var aboutOffset = $('section#about').offset();
+		var contactOffset = $('section#contact').offset();
+		var index = $('main').attr('class');
+		var index = $('main').attr('class');
+		if (index === 'index') {
+			navSelectSection();
+		}
+
+		$(window).resize(function() {
+			pfOffset = $('section#portfolio').offset();
+			aboutOffset = $('section#about').offset();
+			contactOffset = $('section#contact').offset();
+			if (index === 'index') {
+				navSelectSection();
+			}
+		});
+
+		// Change brand position on scroll and verify which section is in viewport
+		$(window).scroll(function() {
+			windowPos = $(window).scrollTop();
+			var name = $('header h1');
+			var tagline = $('header img#tagline');
+			var brand = $('header div#brand');
+			if (windowPos >= header.outerHeight()-120) {
+				$('img#flower').css('z-index', '1');
+				name.fadeOut(200);
+				tagline.fadeOut(200);
+				brand.removeClass('moveCenter');
+				brand.addClass('moveLeft');
+				header.removeClass('moveDown');
+				header.addClass('moveUp');
+			} else {
+				if (brand.hasClass('moveLeft')) {
+					brand.removeClass('moveLeft');
+					brand.addClass('moveCenter');
+					name.hide().delay(1000).fadeIn(2000);
+					tagline.hide().delay(1000).fadeIn(2000);
+					header.removeClass('moveUp');
+					header.addClass('moveDown');
+					window.setTimeout(function() {
+						$('img#flower').css('z-index', '20');
+					}, 500);
+				}
+			}
+
+			if (index === 'index') {
+				navSelectSection();
+			}
+
+		});
+
+
+		function navSelectSection() {
+
+
+			if ((windowPos >= pfOffset.top - 50) && (windowPos < aboutOffset.top - 350)) {
+				deselectNavLinks();
+				$('nav ul li a#pfLink').addClass('navSelected');
+			} else if ((windowPos >= aboutOffset.top - 50) && (windowPos < contactOffset.top - 350)) {
+				deselectNavLinks();
+				$('nav ul li a#aboutLink').addClass('navSelected');
+			} else if ((windowPos >= contactOffset.top - 50)) {
+				deselectNavLinks();
+				$('nav ul li a#contactLink').addClass('navSelected');
+			} else {
+				deselectNavLinks();
+			}
+
+		} // function navSelectSection()
+
+		var menu = $('nav ul.menu');
+		$(menu).removeClass('expand');
+		$(menu).removeClass('transAfter');
+		//Controls the expansion of the menu for small screens
+		$('div#mainMenu').click(function() {
+			$(menu).toggleClass('expand');
+			$(menu).toggleClass('transAfter');
+			$('div.shopToggleMenu h3').toggleClass('toggled');
+
+		});
+
+		//Close the menu when one of its element is clicked
+		$('ul.menu li a').click(function() {
+			$(menu).removeClass("expand");
+			$(menu).removeClass('transAfter');
+		});
+		//Close the top menu when top bar is clicked
+		$('div#brand').click(function() {
+			$(menu).removeClass("expand");
+			$(menu).removeClass('transAfter');
+		});
+
+		// Selected menu link style
+		$('nav ul li a').click(function() {
+
+			deselectNavLinks();
+			$(this).addClass('navSelected');
+
+		}); // $('nav ul li a').click()
+
+
+		function deselectNavLinks() {
+
+			$('nav ul li a').each(function() {
+				if ($(this).hasClass('navSelected')) {
+					$(this).removeClass('navSelected');
+				}
+			});
+
+		} // function deselectNavLinks()
+
+
+		// Portfolio select section Portfolio
+		$('div#PFMenu button').click(function() {
+
+			$('div#PFMenu button').each(function() {
+				if ($(this).hasClass('selected')) {
+					$(this).removeClass('selected');
+					var sctToRemove = $(this).attr('id');
+					sctToRemove = sctToRemove.slice(6);
+					$('section#Portfolio' + sctToRemove).addClass('hidden');
+				}
+			});
+			$(this).addClass('selected');
+
+			var sctToDisplay = $(this).attr('id');
+			sctToDisplay = sctToDisplay.slice(6);
+			$('section#Portfolio' + sctToDisplay).removeClass('hidden');
+
+		}); // $('div#PFMenu button').click()
+
+		// Disable/Enable links of the portfolio
+		$('div.PFthumb a').click(function() {
+
+			if ($(this).hasClass('disabled')) {
+
+				if ($(this).hasClass('newPF')) {
+
+					var link = $(this).attr('href');
+					var toAppend = $(this).children('div').html();
+					var titlesToAppend = toAppend.slice(toAppend.indexOf('<h3>'), (toAppend.indexOf('</h4>') + 6));
+					var parToAppend = toAppend.slice(toAppend.indexOf('<div class="PFText">') + 20, (toAppend.lastIndexOf('</p>') + 4));
+					if ($(this).hasClass('fcc')) {
+						var parToAppend1 = parToAppend.slice(0, parToAppend.lastIndexOf('freeCodeCamp'));
+						var parToAppend2 = parToAppend.slice(parToAppend.lastIndexOf('freeCodeCamp') + 12);
+						parToAppend = parToAppend1 + '<a href="http://www.freecodecamp.com/" target="_blank" title="Vist the site of freeCodeCamp">freeCodeCamp</a>' + parToAppend2;
+					} else {
+
+					}
+					createPreviewNewPF();
+					return false; // Disable link of PFthumb
+
+				} else {
+
+					var link = $(this).attr('href');
+					var toAppend = $(this).children('div').html();
+					var imgToAppend = toAppend.slice(0, (toAppend.indexOf('>') + 1));
+					var titlesToAppend = toAppend.slice(toAppend.indexOf('<h3>'), (toAppend.indexOf('</h4>') + 6));
+					var parToAppend = toAppend.slice(toAppend.indexOf('<p>'), (toAppend.lastIndexOf('</p>') + 4));
+					if ($(this).hasClass('fcc')) {
+						var parToAppend1 = parToAppend.slice(0, parToAppend.lastIndexOf('freeCodeCamp'));
+						var parToAppend2 = parToAppend.slice(parToAppend.lastIndexOf('freeCodeCamp') + 12);
+						parToAppend = parToAppend1 + '<a href="http://www.freecodecamp.com/" target="_blank" title="Vist the site of freeCodeCamp">freeCodeCamp</a>' + parToAppend2;
+					} else {
+
+					}
+					createPreview();
+					return false; // Disable link of PFthumb
+
+				}
+
+			}
+
+			function createPreview() {
+
+				previewWidth = $(window).width();
+				previewHeight = $(window).height();
+				$('div.preview').css('width', previewWidth);
+				$('div.preview').css('height', previewHeight);
+
+				var htmlToAppend = '';
+				htmlToAppend += '<div class="preview">';
+				htmlToAppend += '<div class="old PFBox noClose cf">';
+				htmlToAppend += '<a href="' + link + '" target="_blank">';
+				htmlToAppend += imgToAppend;
+				htmlToAppend += '</a>';
+				htmlToAppend += '<div class="PFTitles noClose">';
+				htmlToAppend += '<a href="' + link + '" target="_blank">';
+				htmlToAppend += titlesToAppend;
+				htmlToAppend += '</a>';
+				htmlToAppend += '<div class="PFText noClose">';
+				htmlToAppend += parToAppend;
+				htmlToAppend += '</div>';
+				htmlToAppend += '</div>';
+				htmlToAppend += '<button class="closePreviewButt" type="button">x</button>';
+				htmlToAppend += '</div>';
+				htmlToAppend += '</div>';
+				$('div.PFWrapper').append(htmlToAppend);
+				$("body").css({ overflow: 'hidden' });
+				$("html").css({ overflow: 'hidden' });
+
+				setTimeout(function() {
+					$('div.preview').css('opacity', '1');
+					$('div.preview div.PFBox').addClass('openPreview');
+				}, 200);
+
+
+				$('button.closePreviewButt').click(function() {
+
+					$('div.preview div.PFBox').addClass('closePreview');
+					$("body").css({ overflow: 'inherit' });
+					$("html").css({ overflow: 'auto' });
+
+					setTimeout(function() {
+						$('div.preview').css('opacity', '0');
+					}, 200);
+					setTimeout(function() {
+						$('div.preview').remove();
+					}, 700);
+
+				}); // $('button.closePreviewButt').click()
+
+			} // function createPreview()
+
+			function createPreviewNewPF() {
+
+				var htmlToAppend = '';
+				htmlToAppend += '<div class="preview">';
+				htmlToAppend += '<div class="newPFBox noClose cf">';
+				htmlToAppend += '<a href="' + link + '" target="_blank">';
+				htmlToAppend += '</a>';
+				htmlToAppend += '<div class="PFTitles noClose">';
+				htmlToAppend += '<a href="' + link + '" target="_blank">';
+				htmlToAppend += titlesToAppend;
+				htmlToAppend += '</a>';
+				htmlToAppend += '<div class="PFText noClose cf">';
+				htmlToAppend += parToAppend;
+				htmlToAppend += '</div>';
+				htmlToAppend += '</div>';
+				htmlToAppend += '<button class="closePreviewButt" type="button">x</button>';
+				htmlToAppend += '</div>';
+				htmlToAppend += '</div>';
+				$('div.PFWrapper').append(htmlToAppend);
+				$("body").css({ overflow: 'hidden' });
+				$("html").css({ overflow: 'hidden' });
+				$("img.PFImage").addClass('hideImage');
+
+				resizePreview();
+
+				setTimeout(function() {
+					$('div.preview').css('opacity', '1');
+					$('div.preview div.newPFBox').addClass('openPreview');
+				}, 200);
+
+
+				function resizePreview() {
+
+					previewWidth = $(window).width();
+					previewHeight = window.innerHeight;
+					$('div.preview').css('width', previewWidth);
+					$('div.preview').css('height', previewHeight);
+					var widthNewPFBox = (previewWidth * .9);
+					var heightNewPFBox = (previewHeight * .9);
+					$('div.preview div.newPFBox').css('width', widthNewPFBox);
+					$('div.preview div.newPFBox').css('height', heightNewPFBox);
+					$('div.preview div.newPFBox').css('margin-top', (previewHeight * .05));
+					var heightPFTitles = (heightNewPFBox * .9);
+					$('div.newPFBox div.PFTitles').css('height', heightPFTitles);
+					$('div.newPFBox div.PFTitles').css('margin-top', (heightNewPFBox * .05));
+
+				} // function resizePreview()
+
+				$(window).resize(function() {
+					resizePreview();
+				}); // $(window).resize() in Preview
+
+				$('span.linkToPreview').click(function() {
+
+					if ($(this).hasClass('linkToYigWebsite')) {
+						var linkTo = 'linkToYigWebsite';
+					} else if ($(this).hasClass('linkToYigBrand')) {
+						var linkTo = 'linkToYigBrand';
+					} else if ($(this).hasClass('linkToEgkWebsite')) {
+						var linkTo = 'linkToEgkWebsite';
+					} else if ($(this).hasClass('linkToEgkBrand')) {
+						var linkTo = 'linkToEgkBrand';
+					} else if ($(this).hasClass('linkToSlickjs')) {
+						var win = window.open('http://kenwheeler.github.io/slick/', '_blank');
+						win.focus();
+					}
+
+					$('button.closePreviewButt').trigger( "click" );
+
+					setTimeout(function() {
+
+						if (linkTo === 'linkToYigWebsite') {
+							$('div.PFthumb a.newPFYigWebsite').trigger( "click" );
+						} else if (linkTo === 'linkToYigBrand') {
+							$('div.PFthumb a.newPFYigBrand').trigger( "click" );
+						} else if (linkTo === 'linkToEgkWebsite') {
+							$('div.PFthumb a.newPFEgkWebsite').trigger( "click" );
+						} else if (linkTo === 'linkToEgkBrand') {
+							$('div.PFthumb a.newPFEgkBrand').trigger( "click" );
+						}
+
+					}, 700);
+
+				}); // $('span.linkToPreview').click()
+
+				$('button.closePreviewButt').click(function() {
+
+					$('div.preview div.newPFBox').addClass('closePreview');
+					$("body").css({ overflow: 'inherit' });
+					$("html").css({ overflow: 'auto' });
+					$("img.PFImage").removeClass('hideImage');
+
+					setTimeout(function() {
+						$('div.preview').css('opacity', '0');
+					}, 200);
+					setTimeout(function() {
+						$('div.preview').remove();
+					}, 700);
+
+				}); // $('button.closePreviewButt').click()
+
+			} // function createPreviewNewPF()
+
+
+		}); // $('div.PFthumb a').click()
+
+
+	});
+
+	function addFlower() {
+		var flowerImg = '<img id="flower" src="http://www.annemariedufour.com/_img/BlackberryFlowerShadow.png" alt="Flower Image">';
+		$('main.index').append(flowerImg);
+		$('img#flower').fadeIn("slow");
+	}
+	function removeFlower() {
+		$('img#flower').fadeOut(500);
+		setTimeout(function() {
+			$('img#flower').remove();
+		}, 600);
+	}
+
+	$(window).load(function(){
+		$('section#banner').removeClass('faded');
+		$('section#banner').addClass('fadeIn');
+
+		// Add flower image on bigger screens
+		var windowWidth = $(window).width();
+		if (windowWidth > 680) {
+			addFlower();
+		}
+		var windowPos = $(window).scrollTop();
+		var header = $('header');
+		if (windowPos < header.outerHeight()-120) {
+			$('img#flower').css('z-index', '20');
+		}
+
+		// Load portfolio high resolution images
+		$('div.PFthumb img').each(function() {
+
+			if (!$(this).hasClass('previewImg')) {
+				var bkgd = $(this).css('background-image');
+				var bkgdHighRes = bkgd.slice(0, bkgd.indexOf('LowRes')) + 'HighRes.jpg")';
+				$(this).css('background-image', bkgdHighRes);
+
+				$(this).css('-webkit-filter', 'blur(0)');
+				$(this).css(   '-moz-filter', 'blur(0)');
+				$(this).css(     '-o-filter', 'blur(0)');
+				$(this).css(        'filter', 'blur(0)');
+			}
+
+		}); // $('div.PFthumb img').each()
+
+		$('div.preview img').each(function() {
+
+			if (!$(this).hasClass('previewImg')) {
+				var bkgdPrev = $(this).css('background-image');
+				var bkgdHighResPrev = bkgdPrev.slice(0, bkgdPrev.indexOf('LowRes')) + 'HighRes.jpg")';
+				$(this).css('background-image', bkgdHighResPrev);
+			}
+
+		}); // $('div.PFthumb img').each()
+
+	}); // $(window).load()
+</script>
+<style type="text/css">
+	@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+	/*-------------------------------------------
+		 Index
+	-------------------------------------------*/
+	/*
+		1.  Color palette
+		2.  Reset & Clearfix
+		3.  Global styles
+		4.  Header
+			  4.1 Brand
+			  4.2 Navigation
+		5.  Tagline
+		6.  Main Page Sections
+		7.  Portfolio
+			  7.1 Selector
+			  7.2 Selected work
+			  7.3 Preview Window
+		8.  About
+		9.  Contact
+	   10.  Welcome Modal
+	   11.  Footer
+	   12.  Transitions & Animations
+	*/
+
+	/*-------------------------------------------
+		 1. Color Palette
+	-------------------------------------------*/
+	/*
+		Blackish    #151514     rgb(21, 21, 20)
+		Whiteish    #FBFBFB     rgb(251, 251, 251)
+		Greyish     #4D4D4B     rgb(77, 77, 75)
+		Teal_pale   #378999     rgb(55, 137, 153)
+		Teal_dark   #194C60     rgb(25, 76, 96)
+		Orange      #E38D04     rgb(227, 141, 4)
+		Yellow      #E5D647     rgb(229, 214, 71)
+	*/
+
+	/*-------------------------------------------
+		 2. Reset & Clearfix
+	-------------------------------------------*/
+	html,
+	body,
+	div,
+	section,
+	article,
+	aside,
+	header,
+	footer,
+	nav,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	ul,
+	li,
+	a,
+	label,
+	input,
+	textarea,
+	button,
+	table,
+	tr,
+	td,
+	th {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		vertical-align: baseline;
+		font: inherit;
+		list-style: none;
+		text-decoration: none;
+		background: none;
+	}
+
+	/* Micro Clearfix by Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/  */
+	.cf:before,
+	.cf:after {
+		content: " ";
+		display: table;
+	}
+
+	.cf:after {
+		clear: both;
+	}
+
+	/*-------------------------------------------
+		 3. Global styles
+	-------------------------------------------*/
+	html {
+		background: url(http://www.annemariedufour.com/_img/paper_@2X_mySite.jpg) repeat;
+		background-size: 300px auto;
+		overflow-x: hidden;
+	}
+	body {
+		font: 100% Roboto, sans-serif;
+		font-weight: 300;
+		font-style: normal;
+		color: #151514;
+	}
+	h1, h2, h3, label, input, textarea {
+		font-family: Roboto, sans-serif;
+		font-weight: 300;
+		color: #194C60;
+	}
+	h1,h2,h3 {
+		font-size: 1.2rem;
+	}
+	h1, h3 {
+		text-transform: uppercase;
+	}
+	p {
+		font-size: 1rem;
+		line-height: 1.3rem;
+		text-align: justify;
+	}
+	p span {
+		color: #378999;
+	}
+	a, a:visited {
+		color: #151514;
+	}
+	a:hover {
+		color: #378999;
+		cursor: pointer;
+	}
+	.skip {
+		position: absolute;
+		left: -9000em;
+	}
+
+	@media only screen and (min-width: 681px) {
+		p {
+			font-size: 1.2em;
+			line-height: 1.8rem;
+			text-align: left;
+		}
+	}
+
+	/*-------------------------------------------
+		 4. Header
+	-------------------------------------------*/
+	header {
+		position: fixed; top: 0; left: 0;
+		z-index: 10;
+		background: rgba(254,254,254,.97);
+		width: 100%;
+	}
+	.boxshadow header {
+		box-shadow: 0px 5px 4px rgba(55,137,153,.3);
+	}
+
+	@media only screen and (max-width: 980px) {
+		header {
+			height: 8.125rem;
+		}
+	}
+
+	@media only screen and (min-width: 981px) {
+		header {
+			height: 11.25rem;
+		}
+	}
+
+	/*- 4.1 Brand -------------------------------*/
+	header div#brand {
+		z-index: 15;
+		text-align: center;
+	}
+	header img#logo:hover {
+		opacity: .5;
+		cursor: pointer;
+	}
+	header h1 {
+		opacity: .8;
+	}
+
+	@media only screen and (max-width: 980px) {
+		header div#brand {
+			position: fixed; top: 10px; left: 25%;
+			width: 12.5rem;
+		}
+		header img#logo {
+			height: 3.125rem;
+			padding-bottom: .625rem;
+		}
+		header h1 {
+			font-size: .8rem;
+		}
+		header img#tagline {
+			margin: -.8rem 0 0 -2.8rem;
+			width: 260px;
+			height: 50px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 0 0px;
+			background-size: 100% auto;
+		}
+	}
+
+	@media only screen and (min-width: 681px) and (max-width: 980px) {
+		header div#brand {
+			position: fixed; top: 0.625rem; left: 35%;
+		}
+	}
+
+	@media only screen and (min-width: 981px) {
+		header div#brand {
+			position: fixed; top: 20px; left: 34%;
+			width: 25rem;
+		}
+		header img#logo {
+			height: 4.7rem;
+			padding-bottom: .625rem;
+		}
+		header h1 {
+			font-size: 1rem;
+		}
+		header img#tagline {
+			margin: -1.2rem 0 0 -2.3rem;
+			width: 330px;
+			height: 70px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 0 0px;
+			background-size: 100% auto;
+		}
+	}
+
+	/*- 4.2 Navigation --------------------------*/
+
+	@media only screen and (max-width: 980px) {
+		div.shopToggleMenu {
+			position: fixed; right: 15%; top: 1.5rem;
+			z-index: 190;
+			width: 5%;
+		}
+		div.shopToggleMenu h3 {
+			opacity: .7;
+			transition: opacity .5s ease-in-out;
+		}
+		div.shopToggleMenu h3.toggled {
+			opacity: 1;
+			transition: opacity .5s ease-in-out;
+		}
+		nav ul.menu {
+			position: fixed; right: -9000em; top: 70px;
+			background: rgb(254,254,254);
+			padding: 1em 2.5rem;
+			line-height: 3em;
+			text-align: right;
+			opacity: 0;
+			height: 10em;
+			border-radius: 10px;
+			transition: opacity .5s ease-in-out;
+		}
+		.boxshadow nav ul.menu {
+			box-shadow: 1px 3px 5px rgba(55,137,153,.3), -1px 0 5px rgba(55,137,153,.3);
+		}
+		nav ul.expand {
+			right: 0;
+			z-index: 2000;
+		}
+		nav ul.transAfter {
+			opacity: 1;
+			transition: opacity .5s ease-in-out;
+		}
+		nav ul.menu li a:hover, nav ul li a.navSelected {
+			padding-bottom: .4rem;
+		}
+	}
+
+	@media only screen and (min-width: 981px) {
+		div.shopToggleMenu {
+			display: none;
+		}
+		nav ul.menu {
+			position: fixed; right: 5%; top: 3.125rem;
+			z-index: 2000;
+		}
+		nav ul.menu li {
+			display: inline-block;
+		}
+		nav ul.menu li a {
+			padding: .5rem .8rem .2rem;
+			padding-bottom: .2rem;
+			border-bottom: 0px solid rgba(55, 137, 153, 0);
+			transition: all .2s ease-out;
+		}
+		nav ul.menu li a:hover, nav ul li a.navSelected {
+			padding-bottom: .6rem;
+		}
+	}
+
+	nav ul.menu li a:hover, nav ul li a.navSelected {
+		border-bottom: 4px solid rgba(55, 137, 153, 1);
+		color: rgba(55, 137, 153, 1);
+		transition: all .2s ease-out;
+	}
+	nav ul li a.navSelected:hover {
+		cursor: default;
+	}
+
+
+
+	/*-------------------------------------------
+		 5. Tagline
+	-------------------------------------------*/
+	#banner {
+		position: relative;
+		z-index: 1;
+		margin: 0 10% 0 0;
+	}
+
+	@media only screen and (max-width: 980px) {
+		#banner {
+			margin-top: 10rem;
+			width: 90%;
+			padding: 0 0 0 10%;
+		}
+		#banner p.tagp {
+			margin: 0 auto;
+			font-weight: 100;
+			text-align: left;
+			padding-left: 0;
+		}
+		#banner p.tagp:last-of-type {
+			padding: .2rem 0 0 30%;
+		}
+		main.TY #banner {
+			width: 80%;
+			margin: 8.125rem auto 5rem;
+		}
+		main.TY #banner img#thankYou {
+			margin: 3rem 0 1rem;
+			width: 300px;
+			height: 60px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 0 -170px;
+			background-size: 100% auto;
+		}
+		main.TY #banner p.tagp {
+			margin-left: -3rem;
+			padding: 0;
+			text-align: center;
+			line-height: 2rem;
+		}
+		#banner img#delightfulDetails {
+			margin: 1rem 0 1rem 1rem;
+			width: 300px;
+			height: 40px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 0 -45px;
+			background-size: 70% auto;
+		}
+		#banner img#memorableExperience {
+			margin: 1rem 0 1rem 2rem;
+			width: 220px;
+			height: 35px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 0 -87px;
+			background-size: 100% auto;
+		}
+	}
+
+	@media only screen and (min-width: 400px) and (max-width: 680px) {
+		#banner img#delightfulDetails {
+			margin: 1rem 0 1rem 2rem;
+			width: 300px;
+			height: 45px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 0 -50px;
+			background-size: 80% auto;
+		}
+		#banner img#memorableExperience {
+			margin: 1rem 0 1rem 5rem;
+			width: 300px;
+			height: 40px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 0 -105px;
+			background-size: 88% auto;
+		}
+	}
+
+	@media only screen and (min-width: 681px) and (max-width: 980px) {
+		main.index #banner {
+			margin-top: 12rem;
+			height: 300px;
+			width: 70%;
+			padding: 0% 0 0 22%;
+		}
+		#banner p.tagp {
+			padding-left: 1rem;
+			font-size: 1.5rem;
+		}
+		main.TY #banner p.tagp {
+			font-size: 1.4rem;
+		}
+		#banner p.tagp:last-of-type {
+			padding: .2rem 0 0 30%;
+		}
+		main.TY #banner img#thankYou {
+			margin: 5rem 0 1rem 3rem;
+			width: 400px;
+			height: 80px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 0 -230px;
+			background-size: 100% auto;
+		}
+		#banner img#delightfulDetails {
+			margin: 1rem 0 1rem 3rem;
+			width: 500px;
+			height: 70px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 0 -70px;
+			background-size: 70% auto;
+		}
+		#banner img#memorableExperience {
+			margin: 1rem 0 1rem 5rem;
+			width: 500px;
+			height: 50px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 0 -150px;
+			background-size: 77% auto;
+		}
+	}
+
+	@media only screen and (min-width: 981px) {
+		main.index #banner {
+			margin-top: 15rem;
+			height: 450px;
+			padding: 4% 0 0 25%;
+		}
+		main.TY #banner {
+			padding: 15% 0 10% 25%;
+		}
+		#banner p.tagp {
+			font-size: 1.8rem;
+			font-weight: 100;
+		}
+		main.TY #banner p.tagp {
+			font-size: 1.4rem;
+		}
+		main.TY #banner p.tagp:first-of-type {
+			padding: 1.5rem 0 1.5rem 20%;
+		}
+		#banner p.tagp:last-of-type {
+			padding-left: 60%;
+		}
+		main.TY #banner p.tagp:last-of-type {
+			padding: 1.5rem 0 1.5rem 40%;
+		}
+		main.TY #banner img#thankYou {
+			margin: 8rem 0 1rem 3rem;
+			width: 450px;
+			height: 70px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 0 -270px;
+			background-size: 100% auto;
+		}
+		#banner img#delightfulDetails {
+			margin: 1rem 0 1rem 8rem;
+			width: 500px;
+			height: 90px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 0 -90px;
+			background-size: 90% auto;
+		}
+		#banner img#memorableExperience {
+			margin: 1rem 0 1rem 13rem;
+			width: 500px;
+			height: 80px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 0 -200px;
+			background-size: 100% auto;
+		}
+	}
+
+	img#flower {
+		position: absolute;
+	//top: 0;
+	//left: -9000rem;
+		display: none;
+	}
+
+	@media only screen and (min-width: 681px) {
+		img#flower {
+			top: 2rem;
+			left: 0;
+			height: 450px;
+			width: auto;
+		}
+	}
+
+	@media only screen and (min-width: 981px) {
+		img#flower {
+			top: 4rem;
+			height: 650px;
+		}
+	}
+
+	/*-------------------------------------------
+		 6. Main page sections
+	-------------------------------------------*/
+	.mainSection:nth-of-type(even) {
+		background: url(http://www.annemariedufour.com/_img/separation.svg) no-repeat top center;
+		background-size: 100% auto;
+	}
+	.mainSection:nth-of-type(odd) {
+		background: url(http://www.annemariedufour.com/_img/separationFlipped.svg) no-repeat top center;
+		background-size: 100% auto;
+	}
+	.mainSection h1, .mainSection h2 {
+		text-align: center;
+	}
+	.mainSection div p {
+		padding: .5rem 0;
+	}
+
+	@media only screen and (max-width: 980px) {
+		.mainSection {
+			margin: 5rem 10%;
+			padding: 8rem 0;
+		}
+		.mainSection h1 {
+			font-size: 1.5rem;
+			padding-bottom: 1.5rem;
+		}
+		.mainSection h2 {
+			font-size: 1rem;
+			padding-bottom: 1rem;
+		}
+		.mainSection img {
+			width: 70%;
+			padding: 2rem 10% 1rem;
+		}
+	}
+
+	@media only screen and (min-width: 981px) {
+		.mainSection {
+			margin: 5rem 10%;
+			padding: 15% 0;
+		}
+		.mainSection h1 {
+			font-size: 2rem;
+			padding-bottom: 3rem;
+		}
+		.mainSection h2 {
+			font-size: 1.2rem;
+			padding-bottom: 2rem;
+		}
+	}
+
+	/*-------------------------------------------
+		 7. Portfolio
+	-------------------------------------------*/
+	/*- 7.1 Selector -------------------------*/
+	div#PFMenu {
+		margin: 0 auto 1rem;
+		padding: .5rem 0;
+		width: 95%;
+		max-width: 320px;
+	}
+	div#PFMenu h2 {
+		padding: 0 0 .5rem;
+	}
+	div#PFMenu button {
+		margin: 0 1.6%;
+		float: left;
+		border-radius: 10px;
+		width: 30%;
+		height: 2.3rem;
+		font-size: .6rem;
+		transition: all .5s ease-out;
+	}
+	div#PFMenu button:hover, div#PFMenu button.selected {
+		cursor: pointer;
+		color: rgba(254,254,254,.9);
+		text-shadow: 1px 1px 0px rgba(21,21,20,.2);
+		font-weight: 400;
+		height: 3rem;
+		transition: all .5s ease-out;
+	}
+	div#PFMenu button#buttonJsApp {
+		background: rgba(55,137,153,.6);
+	}
+	div#PFMenu button#buttonJsApp:hover, div#PFMenu button#buttonJsApp.selected {
+		background: rgba(55,137,153,1);
+	}
+	div#PFMenu button#buttonBrandID {
+		background: rgba(227,141,4,.6);
+	}
+	div#PFMenu button#buttonBrandID:hover, div#PFMenu button#buttonBrandID.selected {
+		background: rgba(227,141,4,1);
+	}
+	div#PFMenu button#buttonWebDD {
+		background: rgba(77,77,75,.6);
+	}
+	div#PFMenu button#buttonWebDD:hover, div#PFMenu button#buttonWebDD.selected {
+		background: rgba(77,77,75,1);
+	}
+	div#PFMenu button.selected:hover {
+		cursor: default;
+	}
+
+	@media only screen and (min-width: 681px) {
+		div#PFMenu {
+			width: 550px;
+			max-width: 600px;
+		}
+		div#PFMenu h2 {
+			font-size: 1.2rem;
+			padding: 0 0 1rem;
+		}
+		div#PFMenu button {
+			margin: 0 1.6%;
+			width: 30%;
+			height: 3.5rem;
+			font-size: 1rem;
+		}
+		div#PFMenu button:hover, div#PFMenu button.selected {
+			height: 5rem;
+		}
+	}
+
+	/*- 7.2 Selected work---------------------*/
+
+	div.PFthumb img {
+		display: block;
+		padding: 0;
+		margin: 0 auto .5rem;
+		height: auto;
+		background-image: url(http://www.annemariedufour.com/_img/spritePFLowRes.jpg);
+		-webkit-filter: blur(2px);
+		-moz-filter: blur(2px);
+		-o-filter: blur(2px);
+		filter: blur(2px);
+	}
+	div.PFWrapper {
+		border-radius: 20px;
+	}
+	div.PFthumb, div.PFthumb img {
+		border-radius: 10px;
+	}
+	div.PFthumb h3 {
+		padding: .2rem 0;
+		font-size: .7rem;
+		transition: all .2s ease-in-out;
+		text-align: center;
+	}
+	div.PFthumb h4 span, div.PFthumb img.previewImg {
+		display: none;
+	}
+	div.PFthumb p {
+		position: absolute;
+		left: -9000em;
+	}
+
+	@media only screen and (max-width: 680px) {
+		.PFWrapper h2 {
+			padding: 5% 0 1%;
+			font-size: 1rem;
+		}
+		.PortfolioSubWrapper {
+			margin: 0 auto;
+			width: 120%;
+			margin-left: -4%;
+		}
+		.PortfolioSubWrapper#gamesWrapper, .PortfolioSubWrapper#webDDWrapper {
+			margin-left: 14%;
+		}
+		div.PFthumb {
+			position: relative;
+			float: left;
+			margin: 1rem 0;
+			width: 30%;
+			height: 20%;
+		}
+		div.PFthumb h4 {
+			display: none;
+		}
+		div.PFthumb img {
+			width: 80px;
+			background-size: 250px auto;
+		}
+
+		div.PFthumb img#simonImg {
+			background-position: -27px -24px;
+		}
+		div.PFthumb img#ticTacToeImg {
+			background-position: -143px -23px;
+		}
+		div.PFthumb img#wikiImg {
+			background-position: -27px -130px;
+		}
+		div.PFthumb img#CamperNewsImg {
+			background-position: -143px -135px;
+		}
+		div.PFthumb img#weatherImg {
+			background-position: -27px -249px;
+		}
+		div.PFthumb img#calculatorImg {
+			background-position: -143px -258px;
+		}
+		div.PFthumb img#pomodoroImg {
+			background-position: -27px -363px;
+		}
+		div.PFthumb img#quoteImg {
+			background-position: -143px -368px;
+		}
+		div.PFthumb img#yigBrandImg {
+			background-position: -27px -488px;
+		}
+		div.PFthumb img#titanBrandImg {
+			background-position: -143px -485px;
+		}
+		div.PFthumb img#egkBrandImg {
+			background-position: -27px -603px;
+		}
+		div.PFthumb img#yigSiteImg {
+			background-position: -143px -600px;
+		}
+		div.PFthumb img#egkSiteImg {
+			background-position: -18px -710px;
+		}
+
+	}
+
+	@media only screen and (min-width: 475px) and (max-width: 680px) {
+		div.PFthumb img {
+			width: 120px;
+			background-size: 400px auto;
+		}
+
+		div.PFthumb img#simonImg {
+			background-position: -48px -48px;
+		}
+		div.PFthumb img#ticTacToeImg {
+			background-position: -232px -42px;
+		}
+		div.PFthumb img#wikiImg {
+			background-position: -48px -216px;
+		}
+		div.PFthumb img#CamperNewsImg {
+			background-position: -232px -217px;
+		}
+		div.PFthumb img#weatherImg {
+			background-position: -48px -403px;
+		}
+		div.PFthumb img#calculatorImg {
+			background-position: -232px -412px;
+		}
+		div.PFthumb img#pomodoroImg {
+			background-position: -48px -587px;
+		}
+		div.PFthumb img#quoteImg {
+			background-position: -232px -592px;
+		}
+		div.PFthumb img#yigBrandImg {
+			background-position: -48px -789px;
+		}
+		div.PFthumb img#titanBrandImg {
+			background-position: -232px -781px;
+		}
+		div.PFthumb img#egkBrandImg {
+			background-position: -48px -972px;
+		}
+		div.PFthumb img#yigSiteImg {
+			background-position: -232px -970px;
+		}
+		div.PFthumb img#egkSiteImg {
+			background-position: -30px -1139px;
+		}
+	}
+
+	@media only screen and (min-width: 681px) {
+		.PFWrapper h2 {
+			margin-top: 1rem;
+			padding: 3rem 2rem .5rem;
+			font-size: 1.3rem;
+		}
+		.PFWrapper h2:nth-of-type(1) {
+			margin-top: 0;
+			padding-top: 2rem;
+		}
+		.PFWrapper h2:nth-of-type(2) {
+			background: url(http://www.annemariedufour.com/_img/separationFlipped.svg) no-repeat top center;
+			background-size: 60% auto;
+		}
+		.PFWrapper h2:nth-of-type(3) {
+			background: url(http://www.annemariedufour.com/_img/separation.svg) no-repeat top center;
+			background-size: 80% auto;
+		}
+		.PortfolioSubWrapper {
+			margin: 0 auto;
+			width: 546px;
+		}
+		.PortfolioSubWrapper#gamesWrapper, .PortfolioSubWrapper#webDDWrapper {
+			width: 348px;
+		}
+		div.PFthumb {
+			box-sizing: border-box;
+			float: left;
+			margin: 1rem 2%;
+			width: 160px;
+			height: 220px;
+			background: rgb(254,254,254);
+			border: 2px solid rgba(25,76,96,0);
+			box-shadow: 1px 3px 5px rgba(55,137,153,.3), -1px 0 5px rgba(55,137,153,.3);
+		}
+		div.PFthumb h3 {
+			padding: .5rem .8rem .2rem;
+			text-align: left;
+		}
+		div.PFthumb h4 {
+			padding: 0 .8rem 1rem;
+			font-size: .6rem;
+			color: #4D4D4B;
+		}
+		div.PFWrapper {
+			padding-bottom: 2rem;
+		}
+		div.PFWrapper:hover {
+			background: rgba(21, 21, 20, .02);
+		}
+		div.PFWrapper:hover div.PFthumb:hover {
+			opacity: 1;
+			cursor: pointer;
+		}
+		div.PFWrapper:hover div.PFthumb:hover {
+			border: 2px solid rgba(25,76,96,.6);
+		}
+		div.PFthumb:hover h3 {
+			color: #378999;
+		}
+		div.PFthumb:hover h4 {
+			color: #151514;
+		}
+		div.PFWrapper, div.PFWrapper:hover div.PFthumb, div.PFWrapper:hover div.PFthumb:hover, div.PFWrapper:hover div.PFthumb:hover img {
+			transition: all .2s ease-out;
+		}
+		div.PFthumb img {
+			margin: .6rem auto .5rem;
+			width: 140px;
+			height: auto;
+			border: 2px solid rgba(25,76,96,0);
+			background-size: 480px auto;
+		}
+
+		div.PFthumb img#simonImg {
+			background-position: -59px -60px;
+		}
+		div.PFthumb img#ticTacToeImg {
+			background-position: -282px -52px;
+		}
+		div.PFthumb img#wikiImg {
+			background-position: -59px -260px;
+		}
+		div.PFthumb img#CamperNewsImg {
+			background-position: -282px -260px;
+		}
+		div.PFthumb img#weatherImg {
+			background-position: -59px -485px;
+		}
+		div.PFthumb img#calculatorImg {
+			background-position: -282px -495px;
+		}
+		div.PFthumb img#pomodoroImg {
+			background-position: -59px -705px;
+		}
+		div.PFthumb img#quoteImg {
+			background-position: -282px -716px;
+		}
+		div.PFthumb img#yigBrandImg {
+			background-position: -59px -949px;
+		}
+		div.PFthumb img#titanBrandImg {
+			background-position: -282px -938px;
+		}
+		div.PFthumb img#egkBrandImg {
+			background-position: -59px -1167px;
+		}
+		div.PFthumb img#yigSiteImg {
+			background-position: -282px -1170px;
+		}
+		div.PFthumb img#egkSiteImg {
+			background-position: -40px -1368px;
+		}
+
+	}
+
+	@media only screen and (min-width: 981px) {
+		.PFWrapper h2 {
+			margin-top: 2rem;
+			padding: 4rem 2rem .5rem;
+			font-size: 1.4rem;
+		}
+		.PFWrapper h2:nth-of-type(2), #PortfolioBrandID h2 {
+			background-size: 60% auto;
+		}
+		.PFWrapper h2:nth-of-type(3), #PortfolioWebDD h2 {
+			background-size: 60% auto;
+		}
+		.PortfolioSubWrapper {
+			width: 771px;
+		}
+		.PortfolioSubWrapper#gamesWrapper, .PortfolioSubWrapper#webDDWrapper {
+			width: 487px;
+		}
+		div.PFthumb {
+			margin: 1rem 2.4%;
+			width: 220px;
+			height: 280px;
+		}
+		div.PFthumb h3 {padding: .2rem 0;
+			padding: .5rem 1rem .2rem;
+			font-size: 1rem;
+		}
+		div.PFthumb h4 {
+			padding: 0 1rem 1rem;
+			font-size: .8rem;
+		}
+		div.PFthumb img {
+			width: 200px;
+			background-size: 650px auto;
+		}
+
+		div.PFthumb img#simonImg {
+			background-position: -75px -65px;
+		}
+		div.PFthumb img#ticTacToeImg {
+			background-position: -375px -65px;
+		}
+		div.PFthumb img#wikiImg {
+			background-position: -75px -340px;
+		}
+		div.PFthumb img#CamperNewsImg {
+			background-position: -375px -355px;
+		}
+		div.PFthumb img#weatherImg {
+			background-position: -75px -655px;
+		}
+		div.PFthumb img#calculatorImg {
+			background-position: -375px -675px;
+		}
+		div.PFthumb img#pomodoroImg {
+			background-position: -75px -955px;
+		}
+		div.PFthumb img#quoteImg {
+			background-position: -375px -970px;
+		}
+		div.PFthumb img#yigBrandImg {
+			background-position: -75px -1275px;
+		}
+		div.PFthumb img#titanBrandImg {
+			background-position: -375px -1265px;
+		}
+		div.PFthumb img#egkBrandImg {
+			background-position: -75px -1575px;
+		}
+		div.PFthumb img#yigSiteImg {
+			background-position: -375px -1575px;
+		}
+		div.PFthumb img#egkSiteImg {
+			background-position: -52px -1852px;
+		}
+
+	}
+	.PFWrapper section {
+		opacity: 1;
+		transition: opacity .5s ease-in-out;
+	}
+	.PFWrapper section.hidden {
+		position: absolute;
+		left: -9000em;
+		opacity: 0;
+		transition: opacity .5s ease-in-out;
+	}
+
+	img#PFHighResImg {
+		position: absolute;
+		left: -9000em;
+	}
+
+
+	/*- 7.3 Preview Window--------------------*/
+	div.preview {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 200;
+		background: rgba(21, 21, 20, .8);
+		opacity: 0;
+		transition: opacity .5s ease-in-out;
+	}
+	div.preview div.PFBox {
+		position: relative;
+		margin: 3% auto;
+		width: 90%;
+		height: 90%;
+		background: url(http://www.annemariedufour.com/_img/paper_@2X_mySite.jpg) repeat;
+		background-size: 300px auto;
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+		-o-transform: scale(0);
+		transform: scale(0);
+	}
+	div.preview div.old {
+		overflow-y: scroll;
+	}
+	div.preview div.PFBox, div.preview img {
+		border-radius: 10px;
+		box-shadow: 1px 3px 5px rgba(55,137,153,.3), -1px 0 5px rgba(55,137,153,.3);
+	}
+	div.preview img, div.preview div.PFTitles {
+		margin: 1rem auto;
+		padding: 0;
+	}
+	div.preview div.PFBox, div.preview img.PFImage {
+		border: 2px solid rgba(25,76,96,.8);
+	}
+	div.preview div.PFTitles {
+		width: 80%;
+		height: 50%;
+	}
+	div.preview img {
+		display: block;
+		height: auto;
+		background-image: url(http://www.annemariedufour.com/_img/spritePFLowRes.jpg);
+	}
+	div.preview h3 {
+		margin: 0 0 .6rem;
+		font-size: 1.2rem;
+		color: rgba(25,76,96,.8);
+	}
+	div.preview h3, div.preview h4 {
+		text-align: center;
+	}
+	div.preview h4 {
+		color: rgb(55,137,153);
+	}
+	div.preview h4, div.preview p {
+		font-size: .8rem;
+	}
+	div.PFText {
+		height: 80%;
+		margin: .7rem 0;
+		position: relative;
+	}
+	.old div.PFText {
+		overflow-y: scroll;
+	}
+	div.PFText p {
+		margin: .5rem 0;
+		padding: 0;
+		font-size: .8rem;
+		line-height: 1.2rem;
+	}
+	div.PFText p span {
+		font-weight: 400;
+		color: #151514;
+	}
+	div.PFText li {
+		padding-left: 1rem;
+	}
+	div.PFText p a {
+		color: rgb(55,137,153);
+	}
+	div.preview img.previewImg{
+		display: block;
+		height: auto;
+		background-image: url(http://www.annemariedufour.com/_img/spriteTitanId.jpg);
+		border: none;
+		box-shadow: none;
+	}
+	div.preview button.closePreviewButt {
+		position: absolute;
+		z-index: 1000;
+		top: 5px;
+		right: 5px;
+		width: 30px;
+		height: 30px;
+		background: #151514;
+		border-radius: 50%;
+		color: #FBFBFB;
+		font-size: 1.2rem;
+		font-weight: 300;
+		padding-bottom: .2rem;
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+		-webkit-transition: all .2s ease-out;
+		-moz-transition: all .2s ease-out;
+		-o-transition: all .2s ease-out;
+		transition: all .2s ease-out;
+	}
+	div.preview button:hover {
+		cursor: pointer;
+	}
+	div.preview button.closePreviewButt:hover {
+		cursor: pointer;
+		font-weight: 400;
+		color: rgb(55,137,153);
+		-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		transform: scale(1.2);
+		-webkit-transition: all .2s ease-out;
+		-moz-transition: all .2s ease-out;
+		-o-transition: all .2s ease-out;
+		transition: all .2s ease-out;
+	}
+
+	@media only screen and (min-width: 940px) {
+		div.preview img, div.preview div.PFTitles {
+			margin: 4%;
+		}
+		div.preview img {
+			display: block;
+			float: left;
+			margin-top: 6rem;
+			height: auto;
+		}
+		div.preview img.previewImg {
+			float: none;
+		}
+		div.preview div.PFTitles {
+			width: 91%;
+			height: 91%;
+		}
+		div.preview h3 {
+			margin: 1rem 0 .8rem;
+			padding-top: 1rem;
+			font-size: 1.6rem;
+		}
+		div.preview h4 {
+			margin-bottom: 1rem;
+		}
+		div.preview h4, div.preview p {
+			font-size: 1rem;
+		}
+		div.PFText {
+			margin: .7rem 0;
+			position: relative;
+		//overflow-y: scroll;
+		}
+		div.PFText p {
+			margin: .5rem 0;
+			padding: 0;
+			font-size: 1rem;
+			line-height: 1.6rem;
+		}
+	}
+	@media only screen and (max-width: 450px) {
+		div.preview img {
+			width: 100px;
+			background-size: 330px auto;
+		}
+
+		div.preview img#simonImg {
+			background-position: -39px -40px;
+		}
+		div.preview img#ticTacToeImg {
+			background-position: -191px -35px;
+		}
+		div.preview img#wikiImg {
+			background-position: -39px -175px;
+		}
+		div.preview img#CamperNewsImg {
+			background-position: -191px -180px;
+		}
+		div.preview img#weatherImg {
+			background-position: -39px -332px;
+		}
+		div.preview img#calculatorImg {
+			background-position: -191px -340px;
+		}
+		div.preview img#pomodoroImg {
+			background-position: -39px -485px;
+		}
+		div.preview img#quoteImg {
+			background-position: -191px -490px;
+		}
+		div.preview img#yigBrandImg {
+			background-position: -39px -647px;
+		}
+		div.preview img#titanBrandImg {
+			background-position: -191px -645px;
+		}
+		div.preview img#egkBrandImg {
+			background-position: -39px -800px;
+		}
+		div.preview img#yigSiteImg {
+			background-position: -191px -800px;
+		}
+		div.preview img#egkSiteImg {
+			background-position: -30px -940px;
+		}
+
+	}
+
+	@media only screen and (min-width: 451px) and (max-width: 940px) {
+		div.preview img {
+			width: 220px;
+			background-size: 620px auto;
+		}
+
+		div.preview img#simonImg {
+			background-position: -57px -56px;
+		}
+		div.preview img#ticTacToeImg {
+			background-position: -344px -56px;
+		}
+		div.preview img#wikiImg {
+			background-position: -57px -328px;
+		}
+		div.preview img#CamperNewsImg {
+			background-position: -344px -336px;
+		}
+		div.preview img#weatherImg {
+			background-position: -57px -623px;
+		}
+		div.preview img#calculatorImg {
+			background-position: -344px -625px;
+		}
+		div.preview img#pomodoroImg {
+			background-position: -57px -915px;
+		}
+		div.preview img#quoteImg {
+			background-position: -344px -900px;
+		}
+		div.preview img#yigBrandImg {
+			background-position: -57px -1200px;
+		}
+		div.preview img#titanBrandImg {
+			background-position: -344px -1195px;
+		}
+		div.preview img#egkBrandImg {
+			background-position: -57px -1485px;
+		}
+		div.preview img#yigSiteImg {
+			background-position: -344px -1480px;
+		}
+		div.preview img#egkSiteImg {
+			background-position: -49px -1765px;
+		}
+
+	}
+
+	@media only screen and (min-width: 941px) and (max-width: 1180px) {
+		div.preview img {
+			width: 250px;
+			background-size: 750px auto;
+		}
+
+		div.preview img#simonImg {
+			background-position: -77px -66px;
+		}
+		div.preview img#ticTacToeImg {
+			background-position: -424px -70px;
+		}
+		div.preview img#wikiImg {
+			background-position: -77px -410px;
+		}
+		div.preview img#CamperNewsImg {
+			background-position: -424px -410px;
+		}
+		div.preview img#weatherImg {
+			background-position: -77px -750px;
+		}
+		div.preview img#calculatorImg {
+			background-position: -424px -770px;
+		}
+		div.preview img#pomodoroImg {
+			background-position: -77px -1100px;
+		}
+		div.preview img#quoteImg {
+			background-position: -424px -1100px;
+		}
+		div.preview img#yigBrandImg {
+			background-position: -77px -1460px;
+		}
+		div.preview img#titanBrandImg {
+			background-position: -424px -1455px;
+		}
+		div.preview img#egkBrandImg {
+			background-position: -77px -1806px;
+		}
+		div.preview img#yigSiteImg {
+			background-position: -424px -1800px;
+		}
+		div.preview img#egkSiteImg {
+			background-position: -60px -2136px;
+		}
+
+
+	}
+
+	@media only screen and (min-width: 1181px) {
+		div.preview img {
+			width: 400px;
+			background-size: 1050px auto;
+		}
+
+		div.preview img#simonImg {
+			background-position: -84px -82px;
+		}
+		div.preview img#ticTacToeImg {
+			background-position: -568px -80px;
+		}
+		div.preview img#wikiImg {
+			background-position: -84px -550px;
+		}
+		div.preview img#CamperNewsImg {
+			background-position: -568px -570px;
+		}
+		div.preview img#weatherImg {
+			background-position: -84px -1050px;
+		}
+		div.preview img#calculatorImg {
+			background-position: -568px -1060px;
+		}
+		div.preview img#pomodoroImg {
+			background-position: -84px -1535px;
+		}
+		div.preview img#quoteImg {
+			background-position: -568px -1535px;
+		}
+		div.preview img#yigBrandImg {
+			background-position: -84px -2020px;
+		}
+		div.preview img#titanBrandImg {
+			background-position: -568px -2020px;
+		}
+		div.preview img#egkBrandImg {
+			background-position: -84px -2505px;
+		}
+		div.preview img#yigSiteImg {
+			background-position: -568px -2505px;
+		}
+		div.preview img#egkSiteImg {
+			background-position: -81px -2989px;
+		}
+	}
+
+
+	/*- 7.3 New Preview Window--------------------*/
+
+	div.preview {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 200;
+		background: rgba(21, 21, 20, .8);
+		opacity: 0;
+		transition: opacity .5s ease-in-out;
+	}
+	div.preview div.newPFBox {
+		position: relative;
+		margin: 0 auto;
+		background: url(http://www.annemariedufour.com/_img/paper_@2X_mySite.jpg) repeat;
+		background-size: 300px auto;
+		-webkit-transform: scale(0);
+		-moz-transform: scale(0);
+		-o-transform: scale(0);
+		transform: scale(0);
+	}
+	div.preview img.hideImage {
+		display: none;
+	}
+	div.preview div.newPFBox {
+		border-radius: 10px;
+		box-shadow: 1px 3px 5px rgba(55,137,153,.3), -1px 0 5px rgba(55,137,153,.3);
+	}
+	div.newPFBox div.PFTitles {
+		margin: 0 auto;
+		width: 90%;
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+	div.preview h3 {
+		margin: 0 0 .6rem;
+		font-size: 1.2rem;
+		font-weight: 400;
+		color: rgba(25,76,96,.8);
+	}
+	div.preview h3, div.preview h4 {
+		text-align: center;
+	}
+	div.preview h4 {
+		color: rgb(55,137,153);
+	}
+	div.preview h4 {
+		font-size: .8rem;
+	}
+	div.PFText {
+		height: 80%;
+		margin: .7rem 0;
+		position: relative;
+	}
+	div.PFText p {
+		margin: .5rem 0;
+		padding: 0;
+		font-size: .8rem;
+		line-height: 1.2rem;
+	}
+	div.PFText p:before {
+		content: "";
+		width: 10em;
+		display: block;
+		overflow: hidden;
+	}
+	div.PFText p span {
+		font-weight: 400;
+		color: #151514;
+	}
+	div.PFText p span.linkToPreview {
+		font-weight: 300;
+		color: rgb(55,137,153);
+	}
+	div.PFText p span.linkToPreview:hover {
+		cursor: pointer;
+	}
+	div.PFText li {
+		padding-left: 1rem;
+	}
+	div.PFText p a {
+		color: rgb(55,137,153);
+	}
+	div.preview img.previewImg{
+		display: block;
+		border: none;
+		box-shadow: none;
+		background-repeat: no-repeat;
+	}
+	div.preview button.closePreviewButt {
+		position: absolute;
+		z-index: 1000;
+		top: 5px;
+		right: 5px;
+		width: 30px;
+		height: 30px;
+		background: #151514;
+		border-radius: 50%;
+		color: #FBFBFB;
+		font-size: 1.2rem;
+		font-weight: 300;
+		padding-bottom: .2rem;
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+		-webkit-transition: all .2s ease-out;
+		-moz-transition: all .2s ease-out;
+		-o-transition: all .2s ease-out;
+		transition: all .2s ease-out;
+	}
+	div.preview button:hover {
+		cursor: pointer;
+	}
+	div.preview button.closePreviewButt:hover {
+		cursor: pointer;
+		font-weight: 400;
+		color: rgb(55,137,153);
+		-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		transform: scale(1.2);
+		-webkit-transition: all .2s ease-out;
+		-moz-transition: all .2s ease-out;
+		-o-transition: all .2s ease-out;
+		transition: all .2s ease-out;
+	}
+
+	div.preview div.newPFBox img {
+		margin: .5rem auto;
+		width: 100%;
+		max-width: 500px;
+		height: 0;
+		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+	}
+
+	/* Preview YIG Brand Id */
+	div.preview img.previewYIGBrandId {
+		background-image: url(http://www.annemariedufour.com/_img/spriteYigBrandId.jpg);
+		background-size: 110%;
+	}
+	div.preview img#yigTree {
+		padding-bottom: 50%;
+		background-position: 40% 97%;
+	}
+	div.preview img#yigTypoAndPalette {
+		padding-bottom: 71.72%;
+		background-size: 100%;
+	}
+	div.preview img#yigLogo {
+		padding-bottom: 57.1%;
+		background-position: 40% 57.5%;
+	}
+
+	/* Preview Titan Brand Id */
+	div.preview img.previewTitan {
+		background-image: url(http://www.annemariedufour.com/_img/spriteTitanId.jpg);
+	}
+	div.preview img#titanLogos {
+		background-size: 115%;
+		padding-bottom: 95%;
+		background-position: 50% 30%;
+	}
+	div.preview img#titanTypePaletteCard {
+		background-size: 108%;
+		padding-bottom: 63.55%;
+		background-position: 50% 1.5%;
+	}
+	div.preview img#titanSkectchesAndLogo {
+		background-size: 100%;
+		padding-bottom: 65%;
+		background-position: 50% 63.2%;
+	}
+	div.preview img#titanAssets {
+		background-size: 108%;
+		padding-bottom: 90%;
+		background-position: 50% 98.5%;
+	}
+
+	/* Preview Érdgépker Brand Id */
+	div.preview img.previewEgkBrandId {
+		background-image: url(http://www.annemariedufour.com/_img/spriteEGKBrandId.jpg);
+	}
+	div.preview img#egkPalette {
+		background-size: 100%;
+		padding-bottom: 70%;
+		background-position: 50% 2.5%;
+	}
+	div.preview img#egkLogo {
+		background-size: 115%;
+		padding-bottom: 80%;
+		background-position: 50% 49%;
+	}
+	div.preview img#egkBizzCard {
+		background-size: 120%;
+		padding-bottom: 70%;
+		background-position: 50% 93%;
+	}
+
+	/* Preview YIG Website */
+	div.preview img.previewYIGWebsite {
+		background-image: url(http://www.annemariedufour.com/_img/spriteYigWebsite.jpg);
+	}
+	div.preview img#yigPlan {
+		background-size: 100%;
+		padding-bottom: 29%;
+		background-position: 40% 1%;
+	}
+	div.preview img#yigMockup {
+		background-size: 120%;
+		padding-bottom: 72%;
+		background-position: 50% 18%;
+	}
+	div.preview img#yigLanding {
+		background-size: 100%;
+		padding-bottom: 50%;
+		background-position: 50% 45.5%;
+	}
+	div.preview img#yigMission, div.preview img#yigEnseignement {
+		background-size: 100%;
+		padding-bottom: 60%;
+	}
+	div.preview img#yigMission {
+		background-position: 40% 70%;
+	}
+	div.preview img#yigEnseignement {
+		background-position: 40% 98%;
+	}
+
+	/* Preview EGK Website */
+	div.preview img.previewEgkWebsite {
+		background-image: url(http://www.annemariedufour.com/_img/spriteEGKWebsite.jpg);
+	}
+	div.preview img#egkLandingDesktop {
+		background-size: 114%;
+		padding-bottom: 71%;
+		background-position: 50% 1.7%;
+	}
+	div.preview img#egkLandingMobile {
+		background-size: 114%;
+		padding-bottom: 90%;
+		background-position: 50% 24.5%;
+	}
+	div.preview img#egkXtraPage1, div.preview img#egkXtraPage2, div.preview img#egkXtraPage3 {
+		background-size: 112%;
+		padding-bottom: 77%;
+	}
+	div.preview img#egkXtraPage1 {
+		background-position: 50% 51.8%;
+	}
+	div.preview img#egkXtraPage2 {
+		background-position: 50% 74.4%;
+	}
+	div.preview img#egkXtraPage3 {
+		background-position: 50% 97.1%;
+	}
+
+
+	@media only screen and (min-width: 500px) {
+		div.preview div.newPFBox img {
+			width: 400px;
+		}
+		div.preview img#yigTree {
+			padding-bottom: 200px;
+		}
+		div.preview img#yigTypoAndPalette {
+			padding-bottom: 286px;
+		}
+		div.preview img#yigLogo {
+			padding-bottom: 228px;
+		}
+		div.preview img#titanLogos {
+			padding-bottom: 377px;
+		}
+		div.preview img#titanTypePaletteCard {
+			padding-bottom: 254px;
+		}
+		div.preview img#titanSkectchesAndLogo {
+			padding-bottom: 274px;
+		}
+		div.preview img#titanAssets {
+			padding-bottom: 357px;
+		}
+		div.preview img#egkPalette {
+			padding-bottom: 285px;
+		}
+		div.preview img#egkLogo {
+			padding-bottom: 300px;
+		}
+		div.preview img#egkBizzCard {
+			padding-bottom: 270px;
+		}
+		div.preview img#yigPlan {
+			padding-bottom: 116px;
+		}
+		div.preview img#yigMockup {
+			padding-bottom: 300px;
+		}
+		div.preview img#yigLanding {
+			padding-bottom: 200px;
+		}
+		div.preview img#yigMission, div.preview img#yigEnseignement {
+			padding-bottom: 240px;
+		}
+		div.preview img#egkLandingDesktop {
+			padding-bottom: 283px;
+		}
+		div.preview img#egkLandingMobile {
+			padding-bottom: 360px;
+		}
+		div.preview img#egkXtraPage1, div.preview img#egkXtraPage2, div.preview img#egkXtraPage3 {
+			padding-bottom: 310px;
+		}
+	}
+
+	@media only screen and (min-width: 681px) {
+		div.preview h3 {
+			font-size: 1.4rem;
+		}
+		div.preview h4, div.preview p {
+			margin-bottom: 2rem;
+			font-size: 1rem;
+			line-height: 1.3rem;
+		}
+		div.preview img.Left {
+			float: left;
+			margin-right: 1rem !important;
+			margin-bottom: 2rem !important;
+		}
+		div.preview img.Right {
+			float: right;
+			margin-left: 1rem !important;
+			margin-bottom: 2rem !important;
+		}
+		div.preview img#yigTree, div.preview img#yigTypoAndPalette, div.preview img#yigLogo, div.preview img#titanLogos, div.preview img#titanTypePaletteCard, div.preview img#titanSkectchesAndLogo, div.preview img#titanAssets, div.preview img#yigPlan, div.preview img#yigMockup, div.preview img#egkPalette, div.preview img#egkLogo, div.preview img#egkBizzCard, div.preview img#egkLandingDesktop, div.preview img#egkLandingMobile {
+			width: 40%;
+			max-width: 480px;
+		}
+
+		/* Preview YIG Brand Id */
+		div.preview img#yigTree {
+			padding-bottom: 20%;
+		}
+		div.preview img#yigTypoAndPalette {
+			padding-bottom: 28.68%;
+		}
+		div.preview img#yigLogo {
+			padding-bottom: 22.86%;
+		}
+
+		/* Preview Titan Brand Id */
+		div.preview img#titanLogos {
+			padding-bottom: 38%;
+		}
+		div.preview img#titanTypePaletteCard {
+			padding-bottom: 25.42%;
+		}
+		div.preview img#titanSkectchesAndLogo {
+			padding-bottom: 27%;
+		}
+		div.preview img#titanAssets {
+			padding-bottom: 36%;
+		}
+
+		/* Preview Érdgépker Brand Id */
+		div.preview img#egkPalette {
+			padding-bottom: 28%;
+		}
+		div.preview img#egkLogo {
+			padding-bottom: 35%;
+		}
+		div.preview img#egkBizzCard {
+			padding-bottom: 26%;
+		}
+
+		/* Preview YIG Website */
+		div.preview img#yigPlan {
+			padding-bottom: 11.5%;
+		}
+		div.preview img#yigMockup {
+			padding-bottom: 30%;
+		}
+		div.preview img#yigLanding {
+			width: 500px;
+			padding-bottom: 250px;
+		}
+		div.preview img#yigMission, div.preview img#yigEnseignement {
+			width: 500px;
+			padding-bottom: 310px;
+		}
+
+		/* Preview EGK Website */
+		div.preview img#egkLandingDesktop {
+			padding-bottom: 28.4%;
+		}
+		div.preview img#egkLandingMobile {
+			max-width: 400px;
+			padding-bottom: 36%;
+		}
+		div#xtraPagesWrapper {
+			width: 98%;
+			margin-top: 4.5rem;
+		}
+		div.preview img#egkXtraPage1, div.preview img#egkXtraPage2, div.preview img#egkXtraPage3 {
+			display: inline-block;
+			margin: 0 1%;
+			width: 30%;
+			max-width: 480px;
+			padding-bottom: 23%;
+		}
+
+	}
+
+	@media only screen and (min-width: 981px) {
+		div.preview h3 {
+			font-size: 1.6rem;
+		}
+		div.preview h4, div.preview p {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+		}
+		div#xtraPagesWrapper {
+			margin-top: 10rem;
+		}
+		div#sectionsYig {
+			margin: 2rem 0;
+			width: 98%;
+		}
+		div.preview img#yigMission, div.preview img#yigEnseignement {
+			display: inline-block;
+			width: 47%;
+			padding-bottom: 28.5%;
+			margin: 0 1%;
+		}
+
+	}
+
+	@media only screen and (min-width: 1200px) {
+		div.preview img#yigTree, div.preview img#yigTypoAndPalette, div.preview img#yigLogo, div.preview img#titanLogos, div.preview img#titanTypePaletteCard, div.preview img#titanSkectchesAndLogo, div.preview img#titanAssets, div.preview img#yigPlan, div.preview img#egkPalette, div.preview img#egkLogo, div.preview img#egkBizzCard, div.preview img#egkLandingDesktop {
+			width: 480px;
+		}
+		div.preview img#yigTree {
+			padding-bottom: 228px;
+		}
+		div.preview img#yigTypoAndPalette {
+			padding-bottom: 344px;
+		}
+		div.preview img#yigLogo {
+			padding-bottom: 274px;
+		}
+		div.preview img#titanLogos {
+			padding-bottom: 452px;
+		}
+		div.preview img#titanTypePaletteCard {
+			padding-bottom: 305px;
+		}
+		div.preview img#titanSkectchesAndLogo {
+			padding-bottom: 330px;
+		}
+		div.preview img#titanAssets {
+			padding-bottom: 428px;
+		}
+		div.preview img#egkPalette {
+			padding-bottom: 340px;
+		}
+		div.preview img#egkLogo {
+			padding-bottom: 400px;
+		}
+		div.preview img#egkBizzCard {
+			padding-bottom: 330px;
+		}
+		div.preview img#yigPlan {
+			padding-bottom: 140px;
+		}
+		div.preview img#yigMockup {
+			width: 400px;
+			padding-bottom: 310px;
+		}
+		div.preview img#yigLanding {
+			margin-top: 6rem;
+		}
+		div.preview img#yigMission, div.preview img#yigEnseignement {
+			width: 450px;
+			padding-bottom: 280px;
+		}
+		div.preview img#egkLandingDesktop {
+			padding-bottom: 320px;
+		}
+		div.preview img#egkLandingMobile {
+			padding-bottom: 370px;
+		}
+	}
+
+	div.PFBox, div.newPFBox {
+		-webkit-animation-timing-function: linear;
+		-moz-animation-timing-function: linear;
+		-o-animation-timing-function: linear;
+		animation-timing-function: linear;
+		-webkit-animation-iteration-count: 1;
+		-moz-animation-iteration-count: 1;
+		-o-animation-iteration-count: 1;
+		animation-iteration-count: 1;
+		-webkit-animation-fill-mode: forwards;
+		-moz-animation-fill-mode: forwards;
+		-o-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+		-webkit-animation-timing-function: ease-in;
+		-moz-animation-timing-function: ease-in;
+		-o-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+		-webkit-animation-duration: .3s;
+		-moz-animation-duration: .3s;
+		-o-animation-duration: .3s;
+		animation-duration: .3s;
+	}
+	div.openPreview {
+		-webkit-animation-name: openModal;
+		-moz-animation-name: openModal;
+		-o-animation-name: openModal;
+		animation-name: openModal;
+	}
+	div.closePreview {
+		-webkit-animation-name: closeModal;
+		-moz-animation-name: closeModal;
+		-o-animation-name: closeModal;
+		animation-name: closeModal;
+	}
+
+	/*-------------------------------------------
+		 8. About
+	-------------------------------------------*/
+	section#about img {
+		margin: 1rem 1rem .5rem 1rem;
+		padding: 0;
+		float: right;
+		width: 40%;
+		max-width: 400px;
+		border-radius: 5px;
+	}
+	p.download {
+		text-decoration: underline;
+		color: #378999;
+	}
+
+	@media only screen and (min-width: 981px) {
+		section#about div.bio {
+			width: 60%;
+		}
+	}
+
+	/*-------------------------------------------
+		 9. Contact
+	-------------------------------------------*/
+
+	div.contacts a, div.contacts a:visited {
+		font-size: 1rem;
+		color: #194C60;
+	}
+	div.contacts a:hover {
+		color: #378999;
+	}
+	div.contacts a#email, div#contactIcons {
+		display: block;
+		padding: 1rem;
+		text-align: center;
+	}
+	div#contactIcons {
+		margin-bottom: 2rem;
+	}
+	div#contactIcons i {
+		font-size: 2rem;
+		padding: 0 .5rem;
+	}
+
+	/*- 9.1 Form ------------------------------*/
+
+	.formContent form {
+		width: 90%;
+		margin: 0 7.5%;
+		padding: 2rem 0;
+	}
+	label, input, textarea {
+		display: block;
+		background-color: rgba(55,137,153,.1);
+		padding: 2%;
+	}
+	.radius {
+		border-radius: 7px;
+	}
+	input:focus, textarea:focus {
+		outline: 3px solid rgba(55,137,153, .6);
+	}
+	#submit {
+		float: right;
+		width: 150px;
+		text-align: center;
+		font-size: 1.2rem;
+		color: #194C60;
+		margin: 10% 5% 0 0;
+		text-transform: uppercase;
+		background: #378999;
+		opacity: .8;
+		-webkit-transition: opacity .5s ease-in-out;
+		-moz-transition: opacity .5s ease-in-out;
+		transition: opacity .5s ease-in-out;
+	}
+	#submit:hover {
+		cursor: pointer;
+		opacity: 1;
+		-webkit-transition: opacity .5s ease-in-out;
+		-moz-transition: opacity .5s ease-in-out;
+		transition: opacity .5s ease-in-out;
+	}
+
+	@media only screen and (max-width: 980px) {
+		.formContent {
+			width: 100%;
+			margin: 0 0%;
+			box-shadow: 1px 3px 5px rgba(55,137,153,.3), -1px 0 5px rgba(55,137,153,.3);
+		}
+		label, input, textarea {
+			width: 95%;
+			line-height: 2rem;
+			margin-top: 5%;
+		}
+	}
+
+	@media only screen and (min-width: 981px) {
+		div.contacts a {
+			font-size: 1.2rem;
+		}
+		.formContent {
+			width: 60%;
+			margin: 0 20%;
+			box-shadow: 1px 3px 5px rgba(55,137,153,.3), -1px 0 5px rgba(55,137,153,.3);
+		}
+		label, input, textarea {
+			width: 90%;
+			line-height: 1.5rem;
+			margin-top: 3%;
+		}
+	}
+
+	/*-------------------------------------------
+		 10. Welcome Modal
+	-------------------------------------------*/
+	section#modal {
+		display: none;
+		position: fixed;
+		z-index: 2000;
+	}
+	@media only screen and (max-width: 980px) {
+		section#modal div.PFBox {
+			max-height: 510px;
+		}
+	}
+	section#modal div.PFBox {
+		overflow-y: scroll;
+	}
+	section#modal div.PFBox div {
+		position: relative;
+		height: auto;
+		width: 95%;
+		margin: 0 auto;
+		padding-bottom: 2rem;
+	}
+	section#modal img#imgWelcome {
+		margin: 15% auto 0;
+		padding: 2rem 0 0;
+		width: 200px;
+		height: 10px;
+		background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 8px -155px;
+		background-size: 100% auto;
+		box-shadow: none;
+		float: none;
+	}
+	section#modal p {
+		margin: 0 auto;
+		width: 80%;
+		padding: .5rem 0;
+		max-width: 600px;
+		text-align: justify;
+	}
+	section#modal button#contactMe {
+		display: block;
+		height: 2.3rem;
+		background: rgba(55,137,153,.6);
+		margin: 1rem auto;
+		padding: .5rem .7rem;
+		border-radius: 10px;
+		width: 135px;
+		font-size: 1rem;
+		transition: all .5s ease-out;
+	}
+	section#modal button#contactMe:hover {
+		cursor: pointer;
+		color: rgba(254,254,254,.9);
+		text-shadow: 1px 1px 0px rgba(21,21,20,.2);
+		font-weight: 400;
+		height: 3rem;
+		background: rgba(55,137,153,1);
+		transition: all .5s ease-out;
+	}
+	@media only screen and (min-width: 681px) {
+		section#modal div.PFBox div {
+			max-width: 70%;
+		}
+		section#modal p {
+			text-align: left;
+		}
+		section#modal button#contactMe {
+			bottom: -12%;
+			left: 35%;
+		}
+		section#modal img#imgWelcome {
+			margin: 10% auto 0;
+			padding: 2rem 0 0;
+			width: 350px;
+			height: 30px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 8px -275px;
+			background-size: 100% auto;
+		}
+	}
+	@media only screen and (min-width: 981px) {
+		section#modal div.PFBox div {
+			width: auto;
+			margin: 5% auto;
+			max-width: 80%;
+			border: 2px solid rgba(25,76,96,.6);
+			border-radius: 10px;
+		}
+	}
+	@media only screen and (min-width: 981px) {
+		section#modal button#contactMe {
+			bottom: -10%;
+			left: 42%;
+		}
+		section#modal img#imgWelcome {
+			margin: 5% auto 0;
+			padding: 2rem 0 0;
+			width: 400px;
+			height: 40px;
+			background: url(http://www.annemariedufour.com/_img/spriteWords.png) no-repeat 8px -310px;
+			background-size: 100% auto;
+		}
+	}
+
+
+	/*-------------------------------------------
+		 11. Footer
+	-------------------------------------------*/
+	footer {
+		background-color: rgba(55,137,153,.1);
+		padding: 1rem 10%;
+	}
+	footer p {
+		width: 100%;
+		font-size: .8rem;
+		text-align: center;
+		padding: .5rem 0;
+	}
+
+	/*-------------------------------------------
+		 12. Transitions & Animations
+	-------------------------------------------*/
+	.faded {
+		opacity: 0;
+		transition: opacity .1s ease-in-out;
+	}
+	.csstransitions .faded {
+		transition: opacity .5s ease-in-out;
+	}
+	.fadeIn {
+		opacity: 1;
+		transition: opacity 1s ease-in-out;
+	}
+	.csstransitions .faded {
+		transition: opacity 2s ease-in-out;
+	}
+	.cssanimations .moveLeft {
+		-webkit-animation: translateLeft 1.5s cubic-bezier(0.455, 0.030, 0.470, 1.130) forwards;
+		-moz-animation: translateLeft 1.5s cubic-bezier(0.455, 0.030, 0.470, 1.130) forwards;
+		-o-animation: translateLeft 1.5s cubic-bezier(0.455, 0.030, 0.470, 1.130) forwards;
+		animation: translateLeft 1.5s cubic-bezier(0.455, 0.030, 0.470, 1.130) forwards;
+	}
+	.cssanimations .moveCenter {
+		-webkit-animation: translateCenter 1.5s cubic-bezier(0.455, 0.030, 0.470, 1.130) forwards;
+		-moz-animation: translateCenter 1.5s cubic-bezier(0.455, 0.030, 0.470, 1.130) forwards;
+		-o-animation: translateCenter 1.5s cubic-bezier(0.455, 0.030, 0.470, 1.130) forwards;
+		animation: translateCenter 1.5s cubic-bezier(0.455, 0.030, 0.470, 1.130) forwards;
+	}
+	.cssanimations .moveUp {
+		-webkit-animation: moveUp 1.5s ease-in-out forwards;
+		-moz-animation: moveUp 1.5s ease-in-out forwards;
+		-o-animation: moveUp 1.5s ease-in-out forwards;
+		animation: moveUp 1.5s ease-in-out forwards;
+	}
+	.cssanimations .moveDown {
+		-webkit-animation: moveDown 1.5s ease-in-out forwards;
+		-moz-animation: moveDown 1.5s ease-in-out forwards;
+		-o-animation: moveDown 1.5s ease-in-out forwards;
+		animation: moveDown 1.5s ease-in-out forwards;
+	}
+
+	@-webkit-keyframes moveUp {0% {top: 0;} 100%{top: -3.75rem;}}
+	@-moz-keyframes moveUp {0% {top: 0;} 100%{top: -3.75rem;}}
+	@-o-keyframes moveUp {0% {top: 0;} 100%{top: -3.75rem;}}
+	@keyframes moveUp {0% {top: 0;} 100%{top: -3.75rem;}}
+
+	@-webkit-keyframes moveDown {0% {top: -3.75rem;} 100%{top: 0;}}
+	@-moz-keyframes moveDown {0% {top: -3.75rem;} 100%{top: 0;}}
+	@-o-keyframes moveDown {0% {top: -3.75rem;} 100%{top: 0;}}
+	@keyframes moveDown {0% {top: -3.75rem;} 100%{top: 0;}}
+
+	@-webkit-keyframes openModal  {0% {-webkit-transform: scale(0);} 100% {-webkit-transform: scale(1);}}
+	@-moz-keyframes openModal  {0% {   -moz-transform: scale(0);} 100% {   -moz-transform: scale(1);}}
+	@-o-keyframes openModal  {0% {     -o-transform: scale(0);} 100% {     -o-transform: scale(1);}}
+	@keyframes openModal  {0% {        transform: scale(0);} 100% {        transform: scale(1);}}
+
+	@-webkit-keyframes closeModal {0% {-webkit-transform: scale(1);} 100% {-webkit-transform: scale(0);}}
+	@-moz-keyframes closeModal {0% {   -moz-transform: scale(1);} 100% {   -moz-transform: scale(0);}}
+	@-o-keyframes closeModal {0% {     -o-transform: scale(1);} 100% {     -o-transform: scale(0);}}
+	@keyframes closeModal {0% {        transform: scale(1);} 100% {        transform: scale(0);}}
+
+	@media only screen and (max-width: 980px) {
+
+		@-webkit-keyframes translateLeft {0% {left: 25%;} 100%{left: -7%;}}
+		@-moz-keyframes translateLeft {0% {left: 25%;} 100%{left: -7%;}}
+		@-o-keyframes translateLeft {0% {left: 25%;} 100%{left: -7%;}}
+		@keyframes translateLeft {0% {left: 25%;} 100%{left: -7%;}}
+
+		@-webkit-keyframes translateCenter {0% {left: -7%;} 100%{left: 25%;}}
+		@-moz-keyframes translateCenter {0% {left: -7%;} 100%{left: 25%;}}
+		@-o-keyframes translateCenter {0% {left: -7%;} 100%{left: 25%;}}
+		@keyframes translateCenter {0% {left: -7%;} 100%{left: 25%;}}
+
+	}
+
+	@media only screen and (min-width: 681px) and (max-width: 980px) {
+
+		@-webkit-keyframes translateLeft {0% {left: 35%;} 100%{left: -3%;}}
+		@-moz-keyframes translateLeft {0% {left: 35%;} 100%{left: -3%;}}
+		@-o-keyframes translateLeft {0% {left: 35%;} 100%{left: -3%;}}
+		@keyframes translateLeft {0% {left: 35%;} 100%{left: -3%;}}
+
+		@-webkit-keyframes translateCenter {0% {left: -3%;} 100%{left: 35%;}}
+		@-moz-keyframes translateCenter {0% {left: -3%;} 100%{left: 35%;}}
+		@-o-keyframes translateCenter {0% {left: -3%;} 100%{left: 35%;}}
+		@keyframes translateCenter {0% {left: -3%;} 100%{left: 35%;}}
+
+	}
+
+	@media only screen and (min-width: 981px) {
+
+		@-webkit-keyframes translateLeft {0% {left: 34%;} 100%{left: 0%;}}
+		@-moz-keyframes translateLeft {0% {left: 34%;} 100%{left: 0%;}}
+		@-o-keyframes translateLeft {0% {left: 34%;} 100%{left: 0%;}}
+		@keyframes translateLeft {0% {left: 34%;} 100%{left: 0%;}}
+
+		@-webkit-keyframes translateCenter {0% {left: 0%;} 100%{left: 34%;}}
+		@-moz-keyframes translateCenter {0% {left: 0%;} 100%{left: 34%;}}
+		@-o-keyframes translateCenter {0% {left: 0%;} 100%{left: 34%;}}
+		@keyframes translateCenter {0% {left: 0%;} 100%{left: 34%;}}
+
+	}
+</style>
+</html>

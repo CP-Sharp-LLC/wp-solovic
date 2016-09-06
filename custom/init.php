@@ -4,6 +4,7 @@ const MiniHeaderImages   = 'mini_header_images';
 
 define( 'CHILD_THEME_NAME', 'Solovic Rebirth' );
 define( 'CHILD_THEME_URL', 'http://www.cpsharp.net' );
+require_once get_stylesheet_directory() . '/custom/flopbutton.php';
 
 add_action( 'genesis_meta', 'sample_viewport_meta_tag' );
 function sample_viewport_meta_tag() {
@@ -18,7 +19,7 @@ add_theme_support( 'infinite-scroll', array(
 	'footer_widgets' => false,
 	'wrapper'        => true,
 	'render'         => false,
-	'posts_per_page' => false,
+	'posts_per_page' => false
 ) );
 
 add_theme_support( 'html5' );
@@ -54,11 +55,10 @@ function solovic_infinite() {
 	echo '<p>She is also one of the most popular speakers at events for small businesses or any group looking to instill the spirit of entrepreneurism and give attendees the know-how to make it happen. Her keynote addresses are custom tailored to meet the special needs and interests of each group. Susan\'s talent for communicating has not only made her one of the country\'s top small business keynote speakers, it has made her a New York Times, Wall Street Journal, and USA Today bestselling author.</p>';
 	echo '<p class="green-highlight"><em>When Susan works with your group, she delivers content that reaches beyond her formal speaking engagement.</em></p>	</div></div>';
 	echo '<div class="sidebar">';
-	echo '<div class="contact">
-			<h2 class="firstTitle">INTERESTED IN BOOKING SUSAN SOLOVIC FOR YOUR NEXT EVENT?</h2>
-			<a id="contact-init" href="#">CONTACT SUSAN</a>
-			<img src="/template58417.motopreview.com/mt-demo/58400/58417/mt-content/uploads/2016/02/mt-0336-home-banner.jpg" >
-			</a></div></div>';
+	echo '<div class="contact">';
+	$formbutton = new flopbutton( 'Contact', 'Get in touch with Susan Solovic', 'form' );
+	$formbutton.write();
+	echo '</div>';
 }
 
 remove_action( 'genesis_footer', 'genesis_do_footer' );
