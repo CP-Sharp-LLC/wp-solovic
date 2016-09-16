@@ -1,7 +1,5 @@
 <?php
 
-namespace wpsolovic;
-
 class flopbutton {
 	private $display_text;
 	private $show_text;

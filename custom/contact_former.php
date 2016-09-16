@@ -1,8 +1,5 @@
 <?php
 
-namespace wpsolovic;
-
-
 class contact_former {
 
 	public function __construct() {

@@ -4,7 +4,6 @@ const MiniHeaderImages   = 'mini_header_images';
 
 define( 'CHILD_THEME_NAME', 'Solovic Rebirth' );
 define( 'CHILD_THEME_URL', 'http://www.cpsharp.net' );
-require_once get_stylesheet_directory() . '/custom/flopbutton.php';
 
 add_action( 'genesis_meta', 'sample_viewport_meta_tag' );
 function sample_viewport_meta_tag() {
@@ -56,8 +55,33 @@ function solovic_infinite() {
 	echo '<p class="green-highlight"><em>When Susan works with your group, she delivers content that reaches beyond her formal speaking engagement.</em></p>	</div></div>';
 	echo '<div class="sidebar">';
 	echo '<div class="contact">';
-	$formbutton = new flopbutton( 'Contact', 'Get in touch with Susan Solovic', 'form' );
-	$formbutton.write();
+		solovic_write_contact();
+	echo '</div>';
+	echo '</div>';
+}
+
+function solovic_write_contact(){
+	echo '<div class="hover panel flip">
+			  <div class="front">
+			    <div class="pad">
+			      <h2>Contact Susan Solovic</h2>
+			    </div>
+			  </div>
+			  <div class="back" style="">
+			      <div class="pad" style="">';
+	echo /** @lang HTML */
+	'<form id="signupform" class="infusion-form" data-id="embedded_signup:form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup" onsubmit="submitfire(event)">
+        <input data-id="ca:input" type="hidden" name="ca" value="3327101e-dce3-47ef-804f-dcb4bf6ae892">
+        <input data-id="list:input" type="hidden" name="list" value="1118451030">
+        <input data-id="source:input" type="hidden" name="source" value="EFD">
+        
+        <label for="fname">name</label><input id="fname" data-id="First Name:input" type="text" name="first_name" value="" maxlength="50" />
+        <br />
+        <label for="email">e-mail</label><input id="email" data-id="Email Address:input" type="text" name="email" value="" maxlength="80">
+        <button type="submit" class="" data-enabled="enabled" id="ajaxsignup">Sign Up</button>
+    </form>';
+	echo '</div>';
+	echo '</div>';
 	echo '</div>';
 }
 
