@@ -1,0 +1,26 @@
+{
+  "name": "solovic",
+  "version": "1.0.0",
+  "description": "wordpress theme for solovic rebirty",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrispydizzle/wp-solovic.git"
+  },
+  "author": "CP Sharp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrispydizzle/wp-solovic/issues"
+  },
+  "homepage": "https://github.com/chrispydizzle/wp-solovic#readme",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0"
+  },
+	"dependencies": {
+		"lodash": "latest"
+	}
+}

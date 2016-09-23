@@ -11,13 +11,12 @@
 remove_action('genesis_loop', 'genesis_do_loop');
 add_action('genesis_loop', 'solovic_frontpage_loop');
 remove_action('genesis_entry_footer', 'genesis_do_loop');
-// add_action('genesis_entry_footer', 'solovic_article_blend');
 add_action('genesis_after_entry', 'solovic_article_blend');
 
 $gradient_color='green';
 
 function solovic_article_blend() {
-	if($GLOBALS['gradient_color'] == 'green'){
+	if($GLOBALS['gradient_color'] === 'green'){
 		$GLOBALS['gradient_color'] = 'orange';
 	}
 	else {
@@ -27,7 +26,6 @@ function solovic_article_blend() {
 	echo  'Continue reading...&nbsp;&nbsp;';
 	echo '</div>';
 }
-
 
 function solovic_frontpage_loop() {
 	global $wpdb;
@@ -49,7 +47,7 @@ function solovic_frontpage_loop() {
 	$max = 2; //count($posts);
 	for ($i = 0;  $i < $max; $i++) {
 		$postIds[] = $posts[$i]['ID'];
-		$postSlug[] = $posts[$i]['slug'];
+		// $postSlug[] = $posts[$i]['slug'];
 	}
 
 	 // add_filter('genesis_attr_entry', 'solovic_alternate_color');
@@ -142,6 +140,5 @@ function inthenewsBeforeLoop() {
 }
 
 */
-require_once(get_stylesheet_directory()."/custom/flopbutton.php");
 
 genesis();
