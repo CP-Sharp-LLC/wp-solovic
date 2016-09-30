@@ -30,6 +30,7 @@ $solovic-orange-fade: rgba(253, 167, 1, .5);
 $solovic-green: rgb(43, 143, 135);
 $blk: #000;
 $wht: #fff;
+$gray: #ddd;
 $darker-gray: rgb(116, 116, 116);
 $solovic-orange-dark: rgba(253, 167, 1, .5);
 $solovic-orange-transparent: rgba(253, 167, 1, 0);
@@ -120,7 +121,7 @@ header, .site-container {
 	width: 100vw;
 }
 
-.site-container{
+.site-container {
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -566,7 +567,6 @@ nav {
 			margin-right: 9%;
 			margin-top: 7%;
 			position: relative;
-			text-align: justify;
 			width: 56%;
 
 			h2 {
@@ -614,7 +614,7 @@ nav {
 	width: 100%;
 
 	figure {
-		background: $wht url('img/branding/academy-promo.jpg') no-repeat left top;
+		background: $gray url('img/branding/academy-promo.jpg') no-repeat left top;
 		background-origin: content-box;
 		background-size: auto 113%;
 		height: 100%;
@@ -624,6 +624,20 @@ nav {
 	}
 }
 
+#everlong_pager {
+	li {
+		a {
+			color: $solovic-green;
+			text-decoration: none;
+		}
+
+		display: inline;
+		font-size: 2vh;
+		font-weight: bold;
+		padding-right: 1%;
+	}
+	text-align: center;
+}
 
 .article-list__page {
 	border-top: 1px solid #ddd;
@@ -699,4 +713,8 @@ nav {
 .article-list__pagination__item {
 	display: inline-block;
 	margin: 0 1em;
+}
+
+.everlong-pager-inactive {
+	opacity: 0;
 }

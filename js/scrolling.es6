@@ -1,99 +1,106 @@
-// import * as Math from "lodash";
+class page_controller {
+	constructor() {
+		this.page_scroll_handler = new scroll_handler();
+		this.page_menu_handler = new link_handler();
+		this.current_page = 0;
 
-function getDocumentHeight() {
-	const body = document.body;
-	const html = document.documentElement;
+		function getDocumentHeight() {
+			const body = document.body;
+			const html = document.documentElement;
 
-	return Math.max(
-		body.scrollHeight, body.offsetHeight,
-		html.clientHeight, html.scrollHeight, html.offsetHeight
-	);
-};
+			return Math.max(
+				body.scrollHeight, body.offsetHeight,
+				html.clientHeight, html.scrollHeight, html.offsetHeight
+			);
+		}
 
-function getScrollTop() {
-	return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-}
+		function getScrollTop() {
+			return (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+		}
 
-function getArticleImage() {
-	const hash = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
-	const image = new Image;
-	image.className = 'article-list__item__image article-list__item__image--loading';
-	image.src = 'http://api.adorable.io/avatars/250/' + hash;
+		function do_begin() {
+			this.page_menu_handler.scroll_menu($('#menu-main-menu'));
+			this.page_scroll_handler.addPage(++this.current_page);
 
-	image.onload = function() {
-		image.classList.remove('article-list__item__image--loading');
-	};
+			$(window).scroll(function () {
+				if (getScrollTop() < getDocumentHeight() - window.innerHeight) return;
+				solovic_controller.page_scroll_handler.addPage(++solovic_controller.current_page);
+			});
+		}
 
-	return image;
-}
+		this.begin = do_begin;
 
-function getArticle() {
-	const articleImage = getArticleImage();
-	const article = document.createElement('article');
-	article.className = 'article-list__item';
-	article.appendChild(articleImage);
-
-	return article;
-}
-
-function getArticlePage(page, articlesPerPage = 16) {
-	const pageElement = document.createElement('div');
-	pageElement.id = getPageId(page);
-	pageElement.className = 'article-list__page';
-
-	while (articlesPerPage--) {
-		pageElement.appendChild(getArticle());
-	}
-
-	return pageElement;
-}
-
-function addPaginationPage(page) {
-	const pageLink = document.createElement('a');
-	pageLink.href = '#' + getPageId(page);
-	pageLink.innerHTML = page;
-
-	const listItem = document.createElement('li');
-	listItem.className = 'article-list__pagination__item';
-	listItem.appendChild(pageLink);
-
-	articleListPagination.appendChild(listItem);
-
-	if (page === 2) {
-		articleListPagination.classList.remove('article-list__pagination--inactive');
+		this.add_page = function (response) {
+			this.page_scroll_handler.add_page(response);
+		}
 	}
 }
 
-function fetchPage(page) {
-	articleList.appendChild(getArticlePage(page));
-}
-
-function addPage(page) {
-	fetchPage(page);
-	addPaginationPage(page);
-}
-
-function scrolling_manager(){
-	const everlongList = document.getElementById('article-list');
-	const articleListPagination = document.getElementById('article-list-pagination');
-
-	let page = 1;
-
-	return 'article-page-' + n;
-
-	function getPageId(n) {
-
+class link_handler {
+	constructor() {
+		this.menu_container = null;
+		this.scroll_menu = function (menucontainer) {
+			this.menu_container = menucontainer;
+			this.menu_container.find("a").click(function () {
+				let url = $(this).attr('href');
+				solovic_controller.page_scroll_handler.addPage(++solovic_controller.current_page, url);
+				return false;
+			});
+		}
 	}
 }
 
-$(document).ready(function(){
-	let page = 0;
+class scroll_handler {
+	constructor() {
+		this.everlongContainer = $('#everlong_container');
+		this.everlongPager = $('#everlong_pager');
+		this.current_page = 0;
 
-	addPage(++page);
+		this.fetchPage = do_fetchpage;
 
-	$(window).onscroll = function() {
-		if (getScrollTop() < getDocumentHeight() - window.innerHeight) return;
-		addPage(++page);
-	};
+		function do_fetchpage(page, url) {
+			call_nextpage(page, this.getPageId(page),
+				function (response) {
+					solovic_controller.add_page(response);
+				}, url);
+		}
+
+		this.addPage = do_addpage;
+
+		function do_addpage(page, url) {
+			this.fetchPage(page, url);
+		}
+
+		this.getPageId = function (n) {
+			return "everlong-" + n;
+		};
+
+		this.addPaginationPage = function (page) {
+			let pageLink = document.createElement('a');
+			pageLink.innerText = page.page_id;
+			pageLink.href = '#' + this.getPageId(page.page_id);
+			let listItem = document.createElement('li');
+			$(listItem).append(pageLink);
+
+			this.everlongPager.append(listItem);
+
+			if (this.current_page >= 2) {
+				this.everlongPager.removeClass('everlong-pager-inactive');
+			}
+		};
+
+		this.add_page = function (response) {
+			this.everlongContainer.append($(response.row));
+			this.addPaginationPage(response);
+			this.current_page++;
+		}
+	}
+}
+
+let solovic_controller;
+
+$(document).ready(function () {
+	solovic_controller = new page_controller();
+	solovic_controller.begin();
 });
 

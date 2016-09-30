@@ -1,99 +1,107 @@
 'use strict';
 
-// import * as Math from "lodash";
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function getDocumentHeight() {
-	var body = document.body;
-	var html = document.documentElement;
+var page_controller = function page_controller() {
+	_classCallCheck(this, page_controller);
 
-	return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+	this.page_scroll_handler = new scroll_handler();
+	this.page_menu_handler = new link_handler();
+	this.current_page = 0;
+
+	function getDocumentHeight() {
+		var body = document.body;
+		var html = document.documentElement;
+
+		return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+	}
+
+	function getScrollTop() {
+		return window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+	}
+
+	function do_begin() {
+		this.page_menu_handler.scroll_menu($('#menu-main-menu'));
+		this.page_scroll_handler.addPage(++this.current_page);
+
+		$(window).scroll(function () {
+			if (getScrollTop() < getDocumentHeight() - window.innerHeight) return;
+			solovic_controller.page_scroll_handler.addPage(++solovic_controller.current_page);
+		});
+	}
+
+	this.begin = do_begin;
+
+	this.add_page = function (response) {
+		this.page_scroll_handler.add_page(response);
+	};
 };
 
-function getScrollTop() {
-	return window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-}
+var link_handler = function link_handler() {
+	_classCallCheck(this, link_handler);
 
-function getArticleImage() {
-	var hash = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
-	var image = new Image();
-	image.className = 'article-list__item__image article-list__item__image--loading';
-	image.src = 'http://api.adorable.io/avatars/250/' + hash;
+	this.menu_container = null;
+	this.scroll_menu = function (menucontainer) {
+		this.menu_container = menucontainer;
+		this.menu_container.find("a").click(function () {
+			var url = $(this).attr('href');
+			solovic_controller.page_scroll_handler.addPage(++solovic_controller.current_page, url);
+			return false;
+		});
+	};
+};
 
-	image.onload = function () {
-		image.classList.remove('article-list__item__image--loading');
+var scroll_handler = function scroll_handler() {
+	_classCallCheck(this, scroll_handler);
+
+	this.everlongContainer = $('#everlong_container');
+	this.everlongPager = $('#everlong_pager');
+	this.current_page = 0;
+
+	this.fetchPage = do_fetchpage;
+
+	function do_fetchpage(page, url) {
+		call_nextpage(page, this.getPageId(page), function (response) {
+			solovic_controller.add_page(response);
+		}, url);
+	}
+
+	this.addPage = do_addpage;
+
+	function do_addpage(page, url) {
+		this.fetchPage(page, url);
+	}
+
+	this.getPageId = function (n) {
+		return "everlong-" + n;
 	};
 
-	return image;
-}
+	this.addPaginationPage = function (page) {
+		var pageLink = document.createElement('a');
+		pageLink.innerText = page.page_id;
+		pageLink.href = '#' + this.getPageId(page.page_id);
+		var listItem = document.createElement('li');
+		$(listItem).append(pageLink);
 
-function getArticle() {
-	var articleImage = getArticleImage();
-	var article = document.createElement('article');
-	article.className = 'article-list__item';
-	article.appendChild(articleImage);
+		this.everlongPager.append(listItem);
 
-	return article;
-}
+		if (this.current_page >= 2) {
+			this.everlongPager.removeClass('everlong-pager-inactive');
+		}
+	};
 
-function getArticlePage(page) {
-	var articlesPerPage = arguments.length <= 1 || arguments[1] === undefined ? 16 : arguments[1];
+	this.add_page = function (response) {
+		this.everlongContainer.append($(response.row));
+		this.addPaginationPage(response);
+		this.current_page++;
+	};
+};
 
-	var pageElement = document.createElement('div');
-	pageElement.id = getPageId(page);
-	pageElement.className = 'article-list__page';
-
-	while (articlesPerPage--) {
-		pageElement.appendChild(getArticle());
-	}
-
-	return pageElement;
-}
-
-function addPaginationPage(page) {
-	var pageLink = document.createElement('a');
-	pageLink.href = '#' + getPageId(page);
-	pageLink.innerHTML = page;
-
-	var listItem = document.createElement('li');
-	listItem.className = 'article-list__pagination__item';
-	listItem.appendChild(pageLink);
-
-	articleListPagination.appendChild(listItem);
-
-	if (page === 2) {
-		articleListPagination.classList.remove('article-list__pagination--inactive');
-	}
-}
-
-function fetchPage(page) {
-	articleList.appendChild(getArticlePage(page));
-}
-
-function addPage(page) {
-	fetchPage(page);
-	addPaginationPage(page);
-}
-
-function scrolling_manager() {
-	var everlongList = document.getElementById('article-list');
-	var articleListPagination = document.getElementById('article-list-pagination');
-
-	var page = 1;
-
-	return 'article-page-' + n;
-
-	function getPageId(n) {}
-}
+var solovic_controller = void 0;
 
 $(document).ready(function () {
-	var page = 0;
-
-	addPage(++page);
-
-	$(window).onscroll = function () {
-		if (getScrollTop() < getDocumentHeight() - window.innerHeight) return;
-		addPage(++page);
-	};
+	solovic_controller = new page_controller();
+	solovic_controller.begin();
 });
 
 //# sourceMappingURL=scrolling.js.map

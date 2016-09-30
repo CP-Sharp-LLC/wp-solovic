@@ -384,7 +384,6 @@ nav {
     margin-right: 9%;
     margin-top: 7%;
     position: relative;
-    text-align: justify;
     width: 56%; }
     .page-template-landingpage article .entry-header h2 {
       -webkit-animation-duration: 1s;
@@ -423,13 +422,24 @@ nav {
   height: 100%;
   width: 100%; }
   #promoimage figure {
-    background: #fff url("img/branding/academy-promo.jpg") no-repeat left top;
+    background: #ddd url("img/branding/academy-promo.jpg") no-repeat left top;
     background-origin: content-box;
     background-size: auto 113%;
     height: 100%;
     margin: 0;
     padding: 0;
     width: 100%; }
+
+#everlong_pager {
+  text-align: center; }
+  #everlong_pager li {
+    display: inline;
+    font-size: 2vh;
+    font-weight: bold;
+    padding-right: 1%; }
+    #everlong_pager li a {
+      color: #2b8f87;
+      text-decoration: none; }
 
 .article-list__page {
   border-top: 1px solid #ddd;
@@ -495,5 +505,8 @@ nav {
 .article-list__pagination__item {
   display: inline-block;
   margin: 0 1em; }
+
+.everlong-pager-inactive {
+  opacity: 0; }
 
 /*# sourceMappingURL=style.css.map */
