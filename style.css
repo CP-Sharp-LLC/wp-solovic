@@ -119,7 +119,7 @@ header, .site-container {
   width: 27vw; }
   .blurb .writeup {
     padding: 0 6% 0 0;
-    text-align: justify; }
+    text-align: left; }
 
 .rightbox {
   height: 736.5px;
@@ -365,7 +365,7 @@ nav {
   .page-template-landingpage .entry-content p {
     color: rgba(255, 255, 255, 0.75);
     margin: inherit;
-    text-align: justify; }
+    text-align: left; }
     .page-template-landingpage .entry-content p:first-of-type img {
       display: none; }
     .page-template-landingpage .entry-content p:first-child {

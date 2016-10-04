@@ -222,7 +222,7 @@ header, .site-container {
 
 	.writeup {
 		padding: 0 6% 0 0;
-		text-align: justify;
+		text-align: left;
 	}
 }
 
@@ -540,7 +540,7 @@ nav {
 
 			color: $lighttext;
 			margin: inherit;
-			text-align: justify;
+			text-align: left;
 
 			&:first-of-type img {
 				display: none;
